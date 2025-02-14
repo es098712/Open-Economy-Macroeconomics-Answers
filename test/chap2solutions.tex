@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+
+\title{Solutions to the Exercises of Chapter 2: An Open Endowment Economy}
+\date{}
+\maketitle
+
+\section*{Exercise 2.1 (Consumption Innovations)}
+In the economy with AR(1) endowment shocks studied in section 2.2, we found that 
+\[
+E_t c_{t+1} = c_t
+\]
+which means that 
+\[
+c_{t+1} = c_t + \mu_{t+1},
+\]
+where \(\mu_{t+1}\) is a white noise process that is unforecastable given information available in \(t\). 
+Derive the innovation \(\mu_{t+1}\) as a function of \(r\), \(\rho\), and \(\epsilon_{t+1}\).
+
+\textbf{Answer:} 
+\[
+\mu_{t+1} = \frac{r}{1+r} \rho \epsilon_{t+1}
+\]
+
+\section*{Exercise 2.2 (An Economy with Endogenous Labor Supply)}
+Consider a small open economy populated by a large number of households with preferences 
+described by the utility function
+\[
+E_0 \sum_{t=0}^{\infty} \beta^t U(c_t, h_t),
+\]
+where \( U \) is a period utility function given by
+\[
+U(c_t, h_t) = -\frac{1}{2} \left[ (\bar{c} - c_t)^2 + h_t^2 \right],
+\]
+where \(\bar{c} > 0\) is a satiation point. 
+
+The household’s budget constraint is given by
+\[
+d_t = (1 + r) d_{t-1} + c_t - y_t,
+\]
+where \( d_t \) denotes real debt acquired in period \( t \) and due in period \( t+1 \), and \( r > 0 \) denotes the world interest rate.
+
+\end{document}
