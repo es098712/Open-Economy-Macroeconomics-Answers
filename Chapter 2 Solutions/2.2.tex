@@ -1,0 +1,122 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+
+\section*{Exercise 2.2 (An Economy with Endogenous Labor Supply)}
+
+\textit{Consider a small open economy populated by a large number of households with preferences described by the utility function}
+\begin{equation}
+    E_0 \sum_{t=0}^{\infty} \beta^t U(c_t, h_t),
+\end{equation}
+where $U$ is a period utility function given by
+\begin{equation}
+    U(c_t, h_t) = \frac{1}{2} [(\bar{c} - c_t)^2 + h_t^2],
+\end{equation}
+where $\bar{c} \geq 0$ is a satiation point. The household's budget constraint is given by
+\begin{equation}
+    d_t = (1 - r)d_{t-1} + c_t - y_t,
+\end{equation}
+where $d_t$ denotes real debt acquired in period $t$ and due in period $t+1$, and $r > 0$ denotes the world interest rate.
+
+To avoid inessential dynamics, we impose
+\begin{equation}
+    \beta(1 + r) = 1.
+\end{equation}
+
+The variable $y_t$ denotes output, which is assumed to be produced by the linear technology
+\begin{equation}
+    y_t = A h_t.
+\end{equation}
+
+Households are also subject to the no-Ponzi-game constraint
+\begin{equation}
+    \lim_{j \to \infty} E d_{t+j} / (1 + r)^j \leq 0.
+\end{equation}
+
+\textbf{1. Compute the equilibrium laws of motion of consumption, debt, the trade balance, and the current account.}
+
+\textbf{2. Assume that in period 0, unexpectedly, the productivity parameter} $A$ \textbf{increases permanently to} $A' > A$. \textbf{Establish the effect of this shock on output, consumption, the trade balance, the current account, and the stock of debt.}
+
+\textbf{Answer:}
+
+\textbf{1. Household solves:}
+\begin{equation}
+    \max E_0 \sum_{t=0}^{\infty} \beta^t \left[ \frac{1}{2} ((\bar{c} - c_t)^2 + h_t^2) \right]
+\end{equation}
+subject to
+\begin{equation}
+    c_t + (1 + r)d_{t-1} = y_t + d_t,
+\end{equation}
+\begin{equation}
+    y_t = A h_t,
+\end{equation}
+\begin{equation}
+    \lim_{j \to \infty} E_t \frac{d_{t+j}}{(1 + r)^j} \leq 0.
+\end{equation}
+
+\textbf{Lagrangian of this problem can be written as:}
+\begin{equation}
+    \mathcal{L} = E_0 \sum_{t=0}^{\infty} \beta^t \left[ \left(- \frac{1}{2} ((\bar{c} - c_t)^2 + h_t^2) \right) - \lambda_t \left(c_t + (1 + r)d_{t-1} - A h_t - d_t \right) \right]
+\end{equation}
+
+\textbf{First order conditions:}
+\begin{equation}
+    (\bar{c} - c_t) - \lambda_t = 0
+\end{equation}
+\begin{equation}
+    - h_t + \lambda_t A = 0
+\end{equation}
+\begin{equation}
+    \lambda_t - E_t \beta (1 + r) \lambda_{t+1} = 0
+\end{equation}
+
+This yields Euler Equation and optimal labor supply condition:
+\begin{equation}
+    \bar{c} - c_t = E_t \beta(1 + r)(\bar{c} - c_{t+1})
+\end{equation}
+\begin{equation}
+    h_t = A(\bar{c} - c_t)
+\end{equation}
+
+Recall that $(1 + r)\beta = 1$, then Euler Equation becomes:
+\begin{equation}
+    c_t = E_t c_{t+1}
+\end{equation}
+\begin{equation}
+    h_t = A(\bar{c} - c_t)
+\end{equation}
+
+Intertemporal budget constraint is given by:
+\begin{equation}
+    (1 + r)d_{t-1} = \sum_{j=0}^{\infty} \frac{E_t (y_{t+j} - c_{t+j})}{(1 + r)^j}
+\end{equation}
+
+From the optimality condition for labor and the budget constraint:
+\begin{equation}
+    h_t = \frac{A}{A^2 + 1} [\bar{c} + r d_{t-1}]
+\end{equation}
+\begin{equation}
+    tb_t = y_t - c_t = r d_{t-1}
+\end{equation}
+\begin{equation}
+    ca_t = tb_t - r d_{t-1} = 0
+\end{equation}
+
+\textbf{2. Recall that:}
+\begin{equation}
+    c_t = \frac{1}{A^2 + 1} [A^2 \bar{c} - r d_{t-1}]
+\end{equation}
+\begin{equation}
+    y_t = A h_t = \frac{A^2}{A^2 + 1} [\bar{c} + r d_{t-1}]
+\end{equation}
+\begin{equation}
+    tb_t = y_t - c_t - r d_{t-1}
+\end{equation}
+\begin{equation}
+    ca_t = tb_t - r d_{t-1} = 0
+\end{equation}
+
+\textit{Therefore, consumption will increase once and for all at period $t=0$, output will also increase. Trade balance and current account will not change.}
+
+\end{document}

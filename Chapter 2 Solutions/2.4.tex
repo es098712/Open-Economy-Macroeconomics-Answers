@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+
+\section*{Exercise 2.4 (An Open Economy With Habit Formation, II)}
+
+Section 2.2 characterizes the equilibrium dynamics of a small open economy with time separable preferences driven by stationary endowment shocks. It shows that a positive endowment shock induces an improvement in the trade balance on impact. This prediction, we argued, was at odds with the empirical evidence presented in Chapter 1. 
+
+Consider now a variant of the aforementioned model economy in which the representative consumer has time nonseparable preferences described by the utility function:
+
+\begin{equation}
+    -\frac{1}{2} E_t \sum_{j=0}^{\infty} \beta^j [ c_{t+j} - \alpha \bar{c}_{t+j-1} - \bar{c}]^2, \quad t \geq 0,
+\end{equation}
+
+where $c_t$ denotes consumption in period $t$, $\bar{c}_t$ denotes the cross-sectional average level of consumption in period $t$, $E_t$ denotes the mathematical expectations operator conditional on information available in period $t$, and $\beta \in (0,1)$, $\alpha \in (-1,1)$, and $\bar{c} > 0$ are parameters. The case $\alpha = 0$ corresponds to time separable preferences, which is studied in the main text. 
+
+Households take as given the evolution of $\bar{c}_t$. Households can borrow and lend in international financial markets at the constant interest rate $r$. For simplicity, assume that $(1+r)\beta$ equals unity. In addition, each period $t = 0,1,2,\dots$, the household is endowed with an exogenous and stochastic amount of goods $y_t$. The endowment stream follows an AR(1) process of the form:
+
+\begin{equation}
+    y_{t+1} = \rho y_t + \epsilon_{t+1},
+\end{equation}
+
+where $\rho \in [0,1)$ is a parameter and $\epsilon_t$ is a mean-zero i.i.d. shock. Households are subject to the no-Ponzi-game constraint:
+
+\begin{equation}
+    \lim_{j \to \infty} \frac{E_t d_{t+j}} {(1+r)^{-j}} \leq 0,
+\end{equation}
+
+where $d_t$ denotes the representative household’s net debt position at date $t$. At the beginning of period 0, the household inherits a stock of debt equal to $d_{-1}$.
+
+\subsection*{1. Derive the initial equilibrium response of consumption to a unit endowment shock in period 0.}
+
+The equilibrium conditions of this model are:
+
+\begin{align}
+    x_t &= E_t x_{t+1}, \\
+    x_t &= c_t - \alpha \bar{c}_{t-1}, \\
+    d_t &= (1+r)d_{t-1} - c_t + y_t, \\
+    \lim_{j \to \infty} E_t d_{t+j} (1+r)^{-j} &= 0.
+\end{align}
+
+From (2.1EX) and (2.2EX) we get:
+
+\begin{equation}
+    E_t c_{t+j} = \alpha (1 - \alpha)^{j-1} c_{t-1} + \frac{1 - \alpha^{j+1}}{1 - \alpha} x_t.
+\end{equation}
+
+It follows that:
+
+\begin{equation}
+    E_t \sum_{j=0}^{\infty} \beta^j c_{t+j} = \frac{\alpha}{1 - \alpha \beta} c_{t-1} + \left[\frac{1}{1-\beta} - \frac{\alpha \beta}{(1 - \alpha \beta)(1 - \beta)}\right] x_t.
+\end{equation}
+
+From (2.3EX) and (2.4EX) we get:
+
+\begin{equation}
+    (1+r)d_{t-1} = \sum_{j=0}^{\infty} \beta^j y_{t+j} - \sum_{j=0}^{\infty} \beta^j c_{t+j}.
+\end{equation}
+
+Solving for consumption response:
+
+\begin{equation}
+    \frac{d c_t}{d y_t} = \frac{(1 - \beta)(1 - \alpha \beta)}{1 - \rho \beta}.
+\end{equation}
+
+\subsection*{2. Discuss conditions under which a positive output shock leads to a deterioration of the trade balance.}
+
+For $\frac{d \text{tb}_t}{d y_t}$ to be negative, we require the above expression to be greater than unity:
+
+\begin{equation}
+    \alpha < \frac{\rho - 1}{1 - \beta}.
+\end{equation}
+
+Thus, $\alpha$ must be negative. As $\rho \to 1$, $\alpha < 0$ is sufficient.
+
+\end{document}
+
