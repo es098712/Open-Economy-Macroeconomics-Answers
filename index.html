@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Economy Macroeconomics Answers</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Open Economy Macroeconomics</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Answer Keys</a></li>
+                <li><a href="#discussion">Discussion</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Search Bar -->
+    <section class="search-section">
+        <input type="text" id="search" placeholder="Search for answer keys..." onkeyup="searchAnswers()">
+    </section>
+
+    <!-- Answer Keys Section -->
+    <section class="repository">
+        <h2>Answer Keys</h2>
+        <ul id="answer-list">
+            <li><a href="#">Chapter 1 - Introduction</a></li>
+            <li><a href="#">Chapter 2 - Exchange Rates</a></li>
+            <li><a href="#">Chapter 3 - Balance of Payments</a></li>
+            <li><a href="#">More coming soon...</a></li>
+        </ul>
+    </section>
+
+    <!-- Discussion Section -->
+    <section id="discussion" class="discussion-section">
+        <h2>Discussion</h2>
+        <div class="discussion-box">
+            <textarea id="comment-box" placeholder="Write your comment..."></textarea>
+            <button onclick="postComment()">Post</button>
+        </div>
+        <ul id="comments-list"></ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Open Economy Macroeconomics Repository | Hosted on GitHub Pages</p>
+    </footer>
+
+</body>
+</html>
