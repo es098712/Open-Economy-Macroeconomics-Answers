@@ -1,0 +1,1598 @@
+\setcounter{chapter}{2}
+\renewcommand{\theequation}{\thechapter.\arabic{equation}EX}
+\setcounter{equation}{0}
+\setcounter{page}{1}
+\chapter*{Solutions to the Exercises of Chapter~\ref{chapter:endowment}: An  Open  Endowment Economy }
+%\section{Exercises}
+
+\setcounter{section}{5}
+\setcounter{exercise}{0}
+\singlespacing
+
+\begin{exercise}[Consumption Innovations]
+In the economy with AR(1) endowment shocks studied in section~\ref{sec:endowment_economy_stationary_shocks}, we found that $E_tc_{t+1}=c_t$,  which means that $c_{t+1} = c_t + \mu_{t+1}$, where $\mu_{t+1}$ is a white noise process that is unforecastable given information available in $t$. Derive the innovation $\mu_{t+1}$ as a function of $r$, $\rho$, and $\epsilon_{t+1}$. 
+\begin{quote}
+{\bf  Answer:} $\mu_{t+1} = \frac{r}{1+r-\rho} \epsilon_{t+1}$
+\end{quote}
+\end{exercise}
+
+\begin{exercise}[An Economy with Endogenous Labor Supply] \label{exercise:endowment_economy_labor}
+Consider a small open economy populated by a large number of households with preferences described by the utility function
+\[
+E_0 \sum_{t=0}^{\infty}\beta^t U(c_t,h_t),
+\]
+where $U$ is a period utility function given by
+\[
+U(c,h) = -\frac12  \left[
+(\overline{c}-c)^2+h^2
+\right],
+\]
+where $\overline{c}>0$ is a satiation point. The household's budget constraint is given by
+\[
+d_t = (1+r) d_{t-1} + c_t  - y_t,
+\]
+where $d_t$ denotes real debt acquired in period $t$ and due in period $t+1$,  and $r>0$ denotes the world interest rate. To avoid inessential dynamics, we impose
+\[\beta (1+r) =1.\]
+The variable $y_t$ denotes output, which is assumed to be produced by the linear technology
+\[y_t = A h_t. \]
+Households are also subject to the no-Ponzi-game constraint $\lim_{j\rightarrow \infty} E_t
+d_{t+j}/(1+r)^j\le 0.$
+
+\begin{enumerate}
+\item Compute the equilibrium laws of motion of consumption, debt, the trade balance, and the current account. 
+\item Assume that
+in period 0, unexpectedly,  
+ the productivity parameter $A$ increases permanently to $A'>A$. Establish the effect of this shock on output, consumption, the trade balance, the current account, and the stock of debt. 
+\end{enumerate}
+ \begin{quote}
+{\bf Answer: }
+\begin{enumerate}
+\item
+Household solves:
+\begin{align*}
+\max\ &{E}_0\sum_{t=0}^{\infty}\beta^t \left[-\frac{1}{2}((\bar{c}-c_t)^2 + h_t^2)\right] \\
+\text{s.t.}\ & c_t  + (1+r)d_{t-1} = y_t + d_t \\
+& y_t = Ah_t \\ 
+& \lim_{j\to\infty}E_t\frac{d_{t+j}}{(1+r)^j} \le 0
+\end{align*}
+Lagrangian of this problem can be written as:
+\begin{equation*}
+\mathcal{L} = {E}_0\sum_{t=0}^{\infty}\beta^t \left[ \left(-\frac{1}{2}((\bar{c}-c_t)^2 + h_t^2)\right) - \lambda_t (c_t  + (1+r)d_{t-1} - Ah_t - d_t) \right]
+\end{equation*}
+First order conditions:
+\begin{align*}
+&(\bar{c} - c_t) -\lambda_t = 0 \\
+& - h_t + \lambda_t A = 0 \\
+& \lambda_t - E_t \beta(1+r)\lambda_{t+1} = 0
+\end{align*}
+This yields Euler Equation and optimal labor supply condition:
+\begin{align*}
+& \bar{c} - c_t = E_t \beta(1+r)( \bar{c} - c_{t+1}) \\
+& h_t = A(c_t-\bar{c})
+\end{align*}
+Recall that $(1+r)\beta = 1$, then Euler Equation becomes:
+\begin{align*}
+& c_t = E_t c_{t+1} \\
+& h_t = A(\bar{c} - c_t)
+\end{align*}
+Intertemporal budget constraint is given by:
+\begin{equation*}
+(1+r)d_{t-1} = \sum_{j=0}^{\infty} \frac{E_t(y_{t+j}-c_{t+j})}{(1+r)^j}
+\end{equation*}
+Note that $E_t(y_{t+j} - c_{t+j}) =  A^2\bar{c} - E_t(A^2 c_{t+j}) - E_{t}c_{t+j} = A^2 \bar{c} - (A^2 +1)c_t $. 
+\\Then the intertemporal budget constraint can be simplified to become:
+\begin{align*}
+&(1+r)d_{t-1} = \frac{1+r}{r} [A^2 \bar{c}-(A^2 +1)c_t] \\
+& c_t = \frac{1}{A^2 + 1}[A^2 \bar{c} - rd_{t-1}]
+\end{align*}
+From the optimality condition for labor and the budget constraint:
+\begin{align*}
+& h_t = \frac{A}{A^2 + 1}[\bar{c} + r d_{t-1}] \\
+& tb_t = y_t - c_t = r d_{t-1} \\
+& ca_t = tb_t - r d_{t-1} = 0
+\end{align*}
+
+\item 
+
+ Recall that:
+\begin{align*}
+& c_t = \frac{1}{A^2 + 1}[A^2 \bar{c} - rd_{t-1}]\\
+& y_t = Ah_t = \frac{A^2}{A^2 + 1}[\bar{c} + r d_{t-1}] \\
+& tb_t = y_t - c_t = r d_{t-1} \\
+& ca_t = tb_t - r d_{t-1} = 0
+\end{align*}
+Therefore, consumption will increase once and for all at period $t=0$, output will also increase. Trade balance and current account will not change.
+
+\end{enumerate}
+\end{quote}
+\end{exercise}
+
+\begin{exercise}[An Open Economy with Habit Formation, I]
+Consider a two-period small open economy populated by a large number of identical households with preferences specified by the utility function
+\[\ln c_1 + \ln (c_2-x),\]
+where $c_1$ and $c_2$ denote, respectively, consumption in periods 1 and 2. Households are endowed with $y>0$ units of goods each period and are born in period 1 with no assets or debts. In period 1, households can borrow or lend at a zero interest rate. Derive the equilibrium level of consumption and the trade balance under the following three formulations:
+\begin{enumerate}
+\item $x =0$ (no habits).
+\item $x=0.5c_1$ (internal habit formation).
+\item $x = 0.5\tilde{c}_1$, where $\tilde{c}_1$
+denotes  the economy's per capita level of consumption  in period 1(external habit formation). 
+\end{enumerate}
+Compare economies (1) and (2) and provide intuition. Similarly,  compare economies (2) and (3) and provide intuition. 
+
+\begin{quote}
+{\bf Answer:}
+\begin{enumerate}
+\item 
+
+ The intertemporal budget constraint is 
+\[c_2 = 2y-c_1.\]
+
+
+In the economy without habits, the optimality condition is 
+\[
+\frac 1 {c_1} = \frac 1 {2y-c_1}
+\]
+which yields
+\[
+\fbox{$c_1 = y$}
+\]
+\item with internal habits the household's problem is to pick $c_1$ to maximize 
+$\ln c_1 + \ln (2y-1.5c_1)$. The optimality condition is
+\[
+\frac 1 {c_1} = \frac {1.5} {2y-1.5c_1}
+\]
+which yields
+\[
+\fbox{$c_1 = \frac 23y$}
+\]
+\item with external habits the household's problem is to pick $c_1$ to maximize 
+$\ln c_1 + \ln (2y-c_1-0.5 \tilde{c}_t)$. The optimality condition is
+\[
+\frac 1 {c_1} = \frac {1} {2y-c_1-0.5\tilde{c}_1}
+\]
+In equilibrium, $c_1=\tilde{c}_1$. Using this expression to eliminate $\tilde{c}_1$, we obtain
+\[
+\fbox{$c_1 = \frac 45y$}
+\]
+Comparison of  no habits with internal habits: Internal habits delivers less consumption in period 1, because households internalize that the more they consume in period 1, the less happy they are in period 2. 
+Comparison of internal and external habits: Again, with internal habits, households internalize the fact that period-1 consumption makes them unhappy in period 2. This internalization is absent under external habits, so household consume more in period 1 under the latter formulation. It is
+of 
+ interest to note that period-1 consumption is lower under external habits than under no habits. This is because under external habits,  when  $c_1=c_2$, the marginal utility of consumption is higher in period 2than in period 1, tilting consumption  toward the future. 
+\end{enumerate}
+\end{quote}
+\end{exercise}
+
+\begin{exercise} [An Open Economy With Habit Formation, II]
+
+Section~\ref{sec:endowment_economy_stationary_shocks} characterizes the equilibrium dynamics  of a small open economy with time separable preferences driven by stationary endowment shocks.
+It shows that a positive endowment shock induces an improvement in the trade balance  on impact. This prediction, we argued, was at odds with the empirical evidence presented in Chapter~\ref{chapter:empirics}. Consider now a variant of the aforementioned model economy  in which the representative consumer has time nonseparable  preferences described by the utility function 
+\[
+-\frac12 E_t \sum_{j=0}^{\infty}
+\beta^j [c_{t+j}-\alpha \tilde{c}_{t+j-1}-\overline{c}]^2; 
+\quad t\ge0,
+\]
+where $c_t$ denotes consumption in period $t$,  $\tilde{c}_t$ denotes the cross-sectional average level of consumption in period $t$,  $E_t$ denotes the mathematical expectations operator conditional on information available in period $t$,  and $\beta\in (0,1)$, $\alpha \in (-1,1)$, and  $\overline{c}>0$ are parameters. The case $\alpha=0$ corresponds to time separable preferences, which 
+is studied in the main text. Households take as given the evolution of $\tilde{c}_t$. 
+Households can borrow and lend in international financial markets at the constant interest rate $r$. For simplicity, assume that  $(1+r)\beta$ equals unity. In addition, each period $t=0, 1, \dots$ the household is endowed with an exogenous and stochastic amount of goods $y_t$. The endowment stream follows an AR(1) process of the form 
+\[
+y_{t+1} = \rho y_t + \epsilon_{t+1},
+\]
+where $\rho \in [0,1)$ is a parameter and $\epsilon_t$ is a mean-zero i.i.d.\ shock.  
+Households are subject to the no-Ponzi-game constraint 
+\[
+\lim_{j\rightarrow \infty} \frac{E_td_{t+j}}{(1+r)^j} \le 0,
+\]
+where $d_t$ denotes the representative household's net debt position at date $t$. At the beginning of  period 0, the household inherits a stock of debt equal to  $d_{-1}$.  
+
+
+\begin{enumerate}
+\item Derive the initial equilibrium  response of consumption to a unit endowment shock in period 0. 
+\item Discuss conditions (i.e., parameter restrictions), if any, under which a positive output shock can lead to a deterioration of the trade balance. 
+\end{enumerate}
+
+\begin{quote}
+
+
+{\bf Answer:}
+\begin{enumerate}
+\item  The equilibrium conditions of this model are
+\begin{equation}
+\label{eq:endowment_x}
+x_t = E_t x_{t+1}
+\end{equation}
+\begin{equation}
+\label{eq:endowment_c}
+x_t \equiv c_t - \alpha c_{t-1}
+\end{equation}
+\begin{equation}
+\label{eq:endowment_d}
+d_t = (1+r) d_{t-1} + c_t -y_t
+\end{equation}
+\begin{equation}
+\label{eq:endowment_transversality}
+\lim_{j\rightarrow \infty} \frac{E_td_{t+j}}{(1+r)^j} = 0,
+\end{equation}
+From~(\ref{eq:endowment_x}) and (\ref{eq:endowment_c}) we get
+\[
+E_t c_{t+j} = \alpha^{j+1} c_{t-1} + \frac{1-\alpha^{j+1}}{1-\alpha} x_t
+\]
+It follows that 
+\begin{eqnarray*}
+E_t \sum_{j=0}^{\infty} \beta^j
+c_{t+j} 
+&=& \frac{\alpha}{1-\alpha \beta} c_{t-1}
++ 
+\left[
+\frac{1}{1-\beta}
+-
+\frac{\alpha}{1-\alpha\beta}
+\right]
+\frac{x_t}{1-\alpha}
+\\
+&=&
+\frac{\alpha}{1-\alpha\beta} c_{t-1}
++ 
+\frac{1}{(1-\beta)(1-\alpha\beta)}
+x_t
+\end{eqnarray*}
+From~(\ref{eq:endowment_d}) and (\ref{eq:endowment_transversality}) we get
+\begin{eqnarray*}
+(1+r)d_{t-1} 
+&=& \sum_{j=0}^{\infty}
+\beta^j y_{t+j}
+-
+\sum_{j=0}^{\infty}
+\beta^j c_{t+j}
+\\
+&=&
+\frac{1}{1-\rho \beta} y_t
+- \frac{\alpha}{1-\alpha \beta} c_{t-1}
+- 
+\frac{1}{(1-\beta)(1-\alpha\beta)}(
+c_t-\alpha c_{t-1})
+\\
+&=&
+\frac{1}{1-\rho \beta} y_t
++ \frac{\alpha\beta}{(1-\alpha \beta)(1-\beta)} c_{t-1}
+- 
+\frac{1}{(1-\beta)(1-\alpha\beta)} 
+c_t
+\end{eqnarray*}
+So we have
+\[
+\frac{\mbox{d}c_t}{\mbox{d}y_t}
+=\frac{(1-\beta)(1-\alpha\beta)}{1-\rho\beta}
+\]
+
+
+\item For d$tb_t$/d$y_t$ to be negative, we need the above expression to be larger than unity. This requires
+\[
+\alpha < \frac{\rho-1}{1-\beta}
+\]
+So $\alpha$ must be negative. As $\rho\rightarrow 1$, $\alpha<0$ is enough. 
+\end{enumerate}
+
+\end{quote}
+\end{exercise}
+
+\begin{exercise}[Anticipated Endowment Shocks \label{exercise:endowment_anticipated_endowment_shock}] 
+Consider a small open  endowment economy with free capital mobility.  Preferences are described by the utility function
+\[
+-\frac 12E_0 \sum_{t=0}^{\infty} \beta^t (c_t-\overline{c})^2,
+\]
+where  $\beta\in (0,1)$.
+Agents have access to a risk-free internationally traded  bond paying the constant interest rate $r$, satisfying $\beta (1+r)=1$.
+The representative household starts period zero with the initial debt position $d_{-1}$. Each period $t\ge 0$, the household receives an endowment $y_t$, which obeys the law of motion, $y_t-\bar{y} = \rho (y_{t-1}-\bar{y}) + \epsilon_{t-1}$, where $\epsilon_{t-1}$ is an i.i.d.\ shock with mean zero and standard deviation $\sigma_{\epsilon}$, $\bar{y}>0$, and  $\rho\in[0,1)$. Notice that households know already in period $t-1$ the level of $y_t$ with certainty. 
+\begin{enumerate}
+\item Find the equilibrium processes of consumption and the current account. 
+\item Compute the correlation between the current account and output, $corr(ca_t, y_t)$. Compare your result with the standard AR(1) case in which $y_{t}-\bar{y} = \rho \left(y_{t-1}-\bar{y}\right) + \epsilon_t$.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%
+\begin{quote}
+{\bf  Answer:} 
+\begin{enumerate}
+\item 
+\[
+y^p_t -\bar{y} = \frac{r}{1+r-\rho} (y_t -\bar{y}) + \frac{r}{1+r }\frac{1}{1+r-\rho} \epsilon_t
+\]
+\[
+c_t = y^p_t -r d_{t-1}
+\]
+\[
+ca_t = y_t-y^p_t
+\]
+\item 
+For the standard AR(1) case, we have: 
+\[
+ca_t = \frac{1-\rho}{1+r-\rho} (y_t -\bar{y})
+\]
+so that 
+\[
+corr(ca_t, y_t) =1
+\]
+For the case of anticipated endowment shocks
+\[
+corr(ca_t, y_t) =\frac{1}{\sqrt{1 + \left(\frac{r}{1+r}\right)^2 \frac{1-\rho^2}{(1-\rho)^2}}}
+<1\]
+\end{enumerate}
+\end{quote}
+\end{exercise}
+
+
+\begin{exercise}[Anticipated Interest Rate Decline\label{exercise:endowment_anticipated_rate_shock}] 
+
+Consider a small open  endowment economy enjoying free capital mobility.  Preferences are described by the utility function
+\[
+ \sum_{t=0}^{\infty} \beta^t \ln c_t,
+\]
+with $\beta\in (0,1)$. Agents have access to an internationally traded  bond paying the interest rate $r_t$ when held from period $t$ to period $t+1$. 
+The representative household starts period zero with an asset position $b_{-1}$. Each period $t\ge 0$, the household receives an endowment $y_t$. Households know the time paths of $\{r_t\}$ and $\{y_t\}$ with certainty. The sequential budget constraint of the household is given by $c_t + b_t/(1+r_t) = y_t + b_{t-1}$. And the household's borrowing limit is given by $\lim_{j\rightarrow \infty} \frac{b_{t+j}}{\Pi_{s=0}^j (1+r_{t+s})}\ge 0$.
+
+\begin{enumerate}
+  \item Derive the household's present value budget constraint. 
+  \item Derive the equilibrium paths of consumption and assets in terms of $y_t$, $r_t$ and $b_{-1}$. 
+\end{enumerate}
+
+Assume now that in period 0 it is learned that in period $t^*\ge 0$ the interest rate will decline temporarily. Specifically, the new path of the interest rate is
+\[
+r'_t = \left\{
+ \begin{array}{ll}
+r_t &\mbox{for all  $t\ge 0$ and $t \neq t^*$}\\
+r'_{t^*}<r_{t^*} &\mbox{for $ t=t^*$}\\
+\end{array}
+\right.
+.
+\]
+\begin{enumerate}\setcounter{enumi}{2}
+\item Find the impact effect of this anticipated interest rate cut on consumption, that is, find $\ln c'_0/c_0$, where $c'_t$ denotes the equilibrium path of consumption under the new interest rate path and $c_t$ denotes the equilibrium path of consumption under the old interest rate path. 
+ Distinguish two cases. First consider  a storage economy with $y_t=0$ for all $t$ and $b_{-1}>0$. 
+Discuss whether the anticipated future rate cut stimulates demand at the time it is announced. Provide intuition. Then consider an endowment economy with $b_{-1}=0$ and $y_t=y>0$ for all $t$.  Analyze whether the response of consumption in period 0 is equal in size to the anticipated rate cut and whether it  depends on the anticipation horizon $t^*$. In particular, do anticipated interest rate cuts have a smaller stimulating effect on current consumption the further in the future they will take place, that is, the larger $t^*$ is? Provide intuition for your findings. 
+
+\item Relate the insights obtained in this exercise to the debate on Forward Guidance as a monetary policy strategy. In particular, interpret  the present real economy 
+as a monetary economy with rigid nominal prices and a central bank that deploys the necessary monetary policy  to fully control  the real interest rate $r_t$.  Address in particular the question of whether forward guidance  is an effective tool to stimulate aggregate demand. 
+\end{enumerate}
+\begin{quote}
+{\bf Answer:}
+\begin{enumerate}
+\item The PVBC is 
+\begin{equation}
+\sum_{j=0}^{\infty} 
+\left(
+\frac
+{c_{t+j}}
+{\displaystyle \prod_{s=0}^{j-1} (1+r_{t+s})} 
+\right)
+=
+b_{t-1}
++
+\sum_{j=0}^{\infty} 
+\left(
+\frac
+{y_{t+j} }
+{\displaystyle \prod_{s=0}^{j-1} (1+r_{t+s})} 
+\right),
+\end{equation}
+which says that the PDV of consumption is equal to the sum of the  initial asset position and the PDV of the endowment stream. 
+\item 
+The Lagrangian
+\[
+\mathcal{L} = \sum_{t=0}^{\infty} \beta^t \left\{
+\ln c_t + \lambda_t \left[ y_t  + b_{t-1} - c_t - \frac{b_t}{1+r_t} \right]\right\}
+\]
+FOC
+\begin{eqnarray*}
+\frac{1}{c_t}& = &\lambda_t\\
+\frac{\lambda_t}{1+r_t} &=& \beta \lambda_{t+1}
+\end{eqnarray*}
+EQM, $\{c_t,  b_t\}_{t=0}^{\infty}$ such that for all $t\ge 0$
+\begin{eqnarray}
+c_{t+1}&=& \beta (1+r_t)c_t\\
+\label{eq:bc}
+c_t + \frac{b_t}{1+r_t}& = &y_t  + b_{t-1}\\
+\label{eq:tvc}
+\lim_{j\rightarrow \infty} \frac{b_{t+j}}{\Pi_{s=0}^j (1+r_{t+s})}&= &0 
+\end{eqnarray}
+given $\{r_t\}$, $\{y_t\}$, and $b_{-1}$.
+
+Equivalently, EQM  is a $c_0$ such that 
+\begin{equation}
+c_0 = (1-\beta) b_{-1}
++ (1-\beta)  \sum_{t=0}^{\infty} 
+\left(
+\frac
+{y_{t} }
+{\displaystyle \prod_{s=0}^{t-1} (1+r_{s})} 
+\right)
+\end{equation}
+
+To see this, use xxx to obtain
+\begin{equation}
+c_t = \beta^t\left( \prod_{s=0}^{t-1} (1+r_s)\right) c_0.
+\end{equation}
+Rearranging yields 
+$
+\frac{c_t}{\left( \prod_{s=0}^{t-1} (1+r_s)\right)} = \beta^t c_0.
+$
+Now sum both sides $t=0$ to $\infty$
+$\sum_{t=0}^{\infty} 
+\frac{
+ c_{t}}
+{ \prod_{s=0}^{t-1} (1+r_{s})} 
+= \sum_{t=0}^{\infty} 
+\beta^t c_0 = \frac{1}{1-\beta}\,  c_0.
+$ Now use this expression in equation xxx to obtain 
+$
+\frac{1}{1-\beta}\,  c_0
+=
+b_{-1}
++
+\sum_{t=0}^{\infty} 
+\left(
+\frac
+{y_{t} }
+{ \prod_{s=0}^{t-1} (1+r_{s})} 
+\right)
+$
+which yields the equation xxx.
+
+
+How to find the associated path of $b_t$ and $c_t$? Use xxx evaluated at $t=0$. This gives $b_0$. Then use xxx evaluated at $t=0$. This gives $c_1$. With $b_0$ and $c_1$ in hand evaluate xxx for $t=1$ to obtain $b_1$. Continue in this way to construct the sequences $\{c_t\}_{t=0}^{\infty}$ and $\{b_t\}_{t=0}^{\infty}$. 
+
+\item Storage economy, $y=0$ and $b_{-1}>0$
+\[
+\frac{c'_t}{c_t} = \left\{  \begin{array}{ll}
+1 & \mbox{ for all } t\le t^*\\
+\left(\frac{1+r'_{t^*}}{1+r_{t^*}} \right) <1 & \mbox{ for all } t> t^*
+\end{array}
+\right.
+\]
+
+So the anticipated rate cut leaves current consumption unchanged and lowers future consumption. the rate cut has a SE whereby current consumption rises and future consumption falls. But it also has an IE. Here the IE is negative because the positive stock of bonds will pay lower interest rate in the future. With log utility, SE exactly cancels IE effect and the future rate cut fails to stimulate the current economy. 
+
+\item 
+{\bf Endowment Economy}: $y_t = y>0$ for all $t$ and $b_{-1}=0$. 
+
+In this case \eqref{eq:c_0} and \eqref{eq:c'_0} can be written as
+\begin{eqnarray*}
+\label{eq:c_0_endowment}
+c_0 &=& 
+ (1-\beta)   \sum_{t=0}^{\infty} 
+\left(\frac{y_{t}}{q_{0,t}} \right)
+\\&=& 
+ (1-\beta)   \sum_{t=0}^{t^*} 
+\left(\frac{y_{t}}{q_{0,t}} \right)
++ (1-\beta)   \sum_{t=t^*+1}^{\infty} 
+\left(\frac{y_{t}}{q_{0,t}} \right)
+\end{eqnarray*}
+\begin{eqnarray*}
+\label{eq:c'_0_endowment}
+c'_0 &=&  (1-\beta)  \sum_{t=0}^{\infty} 
+\left(
+\frac{y_{t} }
+{q'_{0,t}} 
+\right)\\
+&=& 
+ (1-\beta)   \sum_{t=0}^{t^*} 
+\left(\frac{y_{t}}{q_{0,t}} \right)
++ (1-\beta) \frac{1+r_{t^*}}{1+r'_{t^*}}
+  \sum_{t=t^*+1}^{\infty} 
+\left(\frac{y_{t}}{q_{0,t}} \right)
+\end{eqnarray*}
+so that 
+\[
+c'_0 - c_0 = (1-\beta)  \sum_{t=t^*+1}^{\infty} 
+\left(\frac{y_{t}}{q_{0,t}} \right) \left[\frac{1+r_{t^*}}{1+r'_{t^*}} -1\right]
+>0\]
+
+
+
+What is different now? There is a positive income effect associated with the expected future rate cut. PDV of endowment stream is higher. Thus, SE and IE reinforce each other for $t\le t^*$ and pull in opposite directions for $t>t^*$. 
+
+Size of increase in consumption for $t \le t^*$ now depends on $t^*$. The further in the future is the rate cut, the {\bf smaller} is the positive IE and hence the smaller is increase in demand. By contrast in the NK model, increase in consumption depends only on size of rate cut, but not on anticipation horizon, i.e., a rate cut in 100 years has {\bf same power} as a rate cut in 1 year from now.
+
+\end{enumerate}
+\end{quote}
+\end{exercise}
+
+\begin{exercise}  \label{exercise:endowment_psm}
+[Predicted Second Moments] In Chapter~\ref{chapter:empirics}, we showed that  two empirical regularities that characterize emerging economies are the countercyclicality of the trade balance-to-output ratio and the fact that consumption growth appears to be more volatile than output growth. In this chapter, we developed a simple  
+ small open endowment economy and provided intuitive arguments suggesting that this economy fails to account for these two stylized facts. However, that model does not allow for closed-form solutions of second moments of output growth, consumption growth, or the trade balance-to-output ratio. 
+The goal of this exercise is to obtain these implied statistics numerically. 
+
+To this end, consider the following parameterization of the model developed in the present chapter: 
+\[y_t - \overline{y} = \rho (y_{t-1} - \overline{y}) + \epsilon_t,
+\]
+with $\rho=0.9$, $\overline{y}=1$, and $\epsilon_t$ is distributed normally with mean 0 and standard deviation 0.03. Note that the parameter $\overline{y}$, which earlier in this chapter was implicitly assumed to be zero, represents the deterministic steady state of the output process. Assume further that   
+$r=1/\beta-1=0.1$, $d_{-1}= \overline{y}/2$, and $y_{-1}=\overline{y}$.  
+\begin{enumerate}
+\item Simulate the economy for 100 years. 
+\item Discard the first 50 years of artificial data to minimize the dependence of the results on initial conditions. 
+\item Compute the growth rates of output and consumption and the trade balance-to-output ratio. 
+\item Compute the sample standard deviations of output growth and consumption growth and the correlation between output growth and the trade balance-to-output ratio. Here we denote these three statistics by $\sigma_{gy}$, $\sigma_{gc}$, and $\rho_{gy,tby}$, respectively. 
+\item Replicate steps 1 to 4 10,000 times. For each replication, keep record of $\sigma_{gy}$, $\sigma_{gc}$, and $\rho_{gy,tby}$. 
+\item Report the average of  $\sigma_{gc}/\sigma_{gy}$, and $\rho_{gy,tby}$ over the 10,000 replications. 
+\item Discuss your results.
+\end{enumerate}
+\begin{quote}
+{\bf Answer: } 
+%The solution is in the Matlab file: \verb7 exercise_endowment_psm.m (Predicted Second Moments)7 % in the directory Z:\uribe\book\endowment. %I =       10000 %iterations
+
+
+order: std(gy), std(gc), std(gc)/std(gy), rho(gy, tby)
+    3.1072
+    1.6017
+    0.5147
+    0.3235
+
+consumption growth is less volatile than output growth and the  trade balance is procyclical. 
+
+
+
+\end{quote}
+
+\end{exercise}
+
+\begin{exercise}[Empirical Plausibility of an AR(2) Output Specification] 
+The purpose of this exercise is to obtain econometric estimates of the AR(2) output process given in equation~\eqref{eq:endowment_AR(2)} and then check whether the estimated values of $\rho_1$ and $\rho_2$ satisfy the requirement for permanent income to increase by more than current income in response to an innovation in current income.  The satisfaction of this condition guarantees a countercyclical response of the trade balance and the current account to output innovations in the model. 
+
+\begin{enumerate}
+\item  Download the quarterly data for  Chapter 1 posted on the book's Web site.  For each country, extract GDP per capita at constant local currency units (LCU). Denote this series $\tilde{y}_t$.    
+\item  For each country,  obtain a log-quadratically detrended output series, denoted $\hat{y}_t$, by running the OLS regression 
+\[
+\ln \tilde{y}_t = a_0 + a_1 t + a_2 t^2 + \hat{y}_t,
+\]
+where $\hat{y}_t$ is the regression residual. 
+\item In the model, output is defined in levels. So, for each country, 
+produce the transformed   variable 
+\[
+y_t \equiv \exp(\hat{y}_t). 
+\]
+\item For each country, use the time series $y_t$ to estimate the AR(2) process
+\[
+y_{t} = \rho_0 +  \rho_1 y_{t-1} + \rho_2 y_{t-2} + \epsilon_t
+\]
+by OLS. 
+\item Ignore the parameter $\rho_0$. Set the interest rate $r$ at 2 percent per quarter. 
+  Using the analysis of Section~\ref{sec:endowment-ar(2)}, establish, for each country, whether the condition for permanent income to increase by more than current income in response to an innovation in current income is met. Present your results in the form of a table, with one row for country and columns displaying,  in this order, $\rho_1$, $\rho_2$, and yes/no to indicate whether the condition is met or not. Discuss your findings. 
+\item Change the quarterly interest rate to 1 percent, and recalculate the table. What do you learn and what is the intuition behind your results? 
+\item Redo the exercise using the annual data for real GDP per capita at constant LCU   used in Chapter~\ref{chapter:empirics} and available on the book's Web site. 
+ Make sure to adjust the interest rate in accordance with the change of frequency. Discuss your results.
+\end{enumerate}
+\begin{quote} 
+{\bf Answer:}
+
+To be added. 
+\end{quote}
+\end{exercise}
+
+\begin{exercise}[Expected Output Changes and Permanent Income]\label{exercise:endowment_deriving_eq:endowment_y-yp_delta}
+Equation~\eqref{eq:endowment_y-yp_delta}  expresses the difference between current  and permanent income, $y_t-y^p_t$,  as the present discounted value of expected future changes in the endowment. 
+Present a step-by-step derivation of 
+equation~\eqref{eq:endowment_y-yp_delta} starting from definitions~\eqref{eq:endowment_yp} and~\eqref{eq:endowment_delta_y}. 
+Comment on the cyclical properties of $y_t-y^p_t$ depending on whether  the level or the change of $y_t$ follows an AR(1) process. 
+
+
+\begin{quote}
+{\bf Answer: } 
+Multiply equation~\eqref{eq:endowment_yp} by $(1+r)/r$.
+\[
+\frac{1+r}{r}y^p_t  
+=
+\sum_{j=0}^{\infty} \frac{E_t y_{t+j}}{(1+r)^j}
+\]
+Then split the sum, 
+\[
+\frac{1+r}{r}y^p_t  
+= y_t + 
+\sum_{j=1}^{\infty} \frac{E_t y_{t+j}}{(1+r)^j}
+\]
+Subtract $y^p_t$ from both sides
+\[
+\frac{1}{r}y^p_t  
+= y_t -y^p_t + 
+\sum_{j=1}^{\infty} \frac{E_t y_{t+j}}{(1+r)^j}
+\]
+Rearrange
+\[
+y_t -y^p_t 
+= 
+- 
+\sum_{j=1}^{\infty} \frac{E_t y_{t+j}}{(1+r)^j}
++\frac{1}{r}y^p_t  
+\]
+Divide both sides of~\eqref{eq:endowment_yp} by $r$ and then use the resulting expression to eliminate $\frac{1}{r}y^p_t  $ from the above expression. This yields
+\[
+y_t -y^p_t 
+= 
+- 
+\sum_{j=1}^{\infty} \frac{E_t y_{t+j}}{(1+r)^j}
++\sum_{j=0}^{\infty} \frac{E_t y_{t+j}}{(1+r)^{j+1}}
+=
+- 
+\sum_{j=1}^{\infty} 
+\frac{1}{(1+r)^j} 
+\left[
+E_t y_{t+j} - E_t y_{t+j-1}
+\right]
+\]
+Finally, use~\eqref{eq:endowment_delta_y} to replace 
+$E_t y_{t+j} - E_t y_{t+j-1}$ with $E_t \Delta y_{t+j}$ to obtain equation~\eqref{eq:endowment_y-yp_delta}.
+
+If $y_t$ is AR(1), then as shown in section~\ref{sec:endowment_economy_stationary_shocks}  
+\[
+y^p_t = \frac{r}{1+r-\rho} y_t
+\]
+so that 
+\[
+y_t - y^p_t = \frac{1-\rho}{1+r-\rho} y_t
+\]
+Since $\rho\in(-1,1)$, $\frac{1-\rho}{1+r-\rho}>0$. It follows that $y_t-y^p_t$ is perfectly procyclical, $corr(y_t-y^p_t, y_t) =1$. And $y_t-y^p_t$  inherits the serial correlation of $y_t$, $corr(y_t-y^p_t, y_{t-1}-y^p_{t-1}) = corr(y_t, y_{t-1}) = \rho$. 
+
+If $\Delta y_t$ is AR(1), then $E_t \Delta y_{t+j} = \rho^j \Delta y_t$ for $j\ge 1$. By~\eqref{eq:endowment_y-yp_delta}
+\[
+y_t- y^p_t = -\frac{\rho}{1+r-\rho} \Delta y_t
+\]
+Assuming (as in section~\ref{sec:endowment_nonstationary_endowment})  $\rho\in[0,1)$, $\frac{-\rho}{1+r-\rho}<0$. It follows that $y_t-y^p_t$ is perfectly countercyclical, $corr(y_t-y^p_t, \Delta y_t) =-1$. Now $y_t-y^p_t$  inherits the serial correlation of $\Delta y_t$, $corr(y_t-y^p_t, y_{t-1}-y^p_{t-1}) = corr(\Delta y_t, \Delta y_{t-1}) = \rho$. 
+\end{quote}
+\end{exercise}
+
+
+
+\begin{exercise}[Impatience and the Current Account, I]   Consider a small open endowment economy populated by a large number of identical consumers with preferences described by the utility function
+\[
+\sum_{t=0}^{\infty} \beta^t
+\ln(c_t-\bar{c}),
+\]
+with the usual notation, except that  $\bar{c}>0$ denotes a subsistence level of consumption. 
+Consumers  have access to the international debt market, where the interest rate, denoted by $r$,  is positive,  constant, and 
+satisfies
+\[
+\beta(1+r)<1.
+\]
+Consumers start period 0 with an outstanding debt, including interest,  of $(1+r)d_{-1}$. It is  forbidden to 
+violate the constraint $\lim_{t\rightarrow \infty}(1+r)^{-j}d_{t+j}\le 0$. Each period, everybody receives a positive amount of  consumption goods $y>0$, which is nonstorable. 
+
+\begin{enumerate}
+\item State the optimization problem of the representative consumer.
+\item Derive the consumer's optimality conditions.
+\item Derive  a maximum value of initial debt, $d_{-1}$, beyond which an equilibrium cannot exist.  
+Assume that $d_{-1}$ is less than this threshold. 
+\item Characterize the long-run equilibrium of this economy, that is, find $\lim_{t\rightarrow \infty} x_t$, for  $x_t=c_t$, $d_t$, $tb_t$,  and $ca_t$. Note that in this economy  the long-run value of  external debt is not history dependent.  Comment on the factors determining this   property of the model. 
+\item Derive explicit formulas for the equilibrium dynamic paths of  consumption, debt, the trade balance, and the current account as functions of $t$, $d_{-1}$, $r$, $\beta$, $\bar{c}$, and $y$. 
+\item Now assume that 
+in period 0 the outstanding debt, $d_{-1}$,
+is at its long-run limit level, and that,  unexpectedly, all consumers  receive a permanent increase in the endowment from $y$ to $y'>y$. Compute the initial response of all endogenous variables.  Discuss your result, paying particular attention to possible differences with the case $\beta(1+r)=1$. 
+\item Characterize the economy's dynamics after period 0.
+\end{enumerate}
+
+\begin{quote}
+{\bf Answer: }
+
+
+\begin{enumerate}
+
+\item 
+\[
+\max_{\{c_t, d_t\}}   \sum_{t=0}^{\infty} \beta^t \ln (c_t -\bar{c})
+\]
+subject to 
+\[
+c_t + (1+r) d_{t-1} = y + d_t \quad \mbox{ and } \quad \lim_{j\rightarrow \infty} \frac{d_{t+j}}{(1+r)^j}\le 0
+\]
+given $d_{-1}$. 
+
+\item 
+For all $t\ge0$
+\[
+(c_{t+1}-\bar{c}) = \beta (1+r) (c_t-\bar{c})
+\]
+\[
+\lim_{j\rightarrow \infty} \frac{d_{t+j}}{(1+r)^j} = 0
+\]
+\item 
+Intertemporal budget constraint
+\[
+(1+r) d_{-1} = \sum_{t=0}^{\infty} \frac{y-c_t}{(1+r)^t}
+\]
+Use $c_t = \bar{c} +(\beta(1+r))^t(c_0-\bar{c})$
+\begin{equation}
+\label{eq:endowment_exer_impat I}
+c_0-\bar{c} = \frac{(1-\beta)(1+r)}{r}\left[y-\bar{c} - r d_{-1}\right]
+\end{equation}
+$c_0\ge \bar{c}$ iff $d_{-1} \le \frac{y -\bar{c}}{r}$.  
+\item 
+$\lim_{t\rightarrow \infty} c_t = \bar{c}$, 
+$\lim_{t\rightarrow \infty} d_t = (y-\bar{c})/r$,
+$\lim_{t\rightarrow \infty} tb_t = y-\bar{c}$, 
+$\lim_{t\rightarrow \infty} ca_t = 0$, 
+
+The key factor is the assumption that $\beta(1+r)<1$. If instead $\beta(1+r)=1$, then in the present economy $d_t = d_{-1}$ for all $t\ge0$, that is, the long-run value of external debt would be dependent on initial conditions. 
+
+
+\item 
+For all $t\ge0$
+\[
+c_t = \bar{c} + (\beta (1+r))^t (c_0-\bar{c}); \quad \mbox{ with $c_0$ given in~\eqref{eq:endowment_exer_impat I}} 
+\]
+\[
+d_t = c_t + (1+r)d_{t-1} - y
+\]
+\[
+tb_t = y - c_t
+\]
+\[
+ca_t = d_{t-1} - d_t
+\]
+\item 
+Set $d_{-1} = (y-\bar{c})/r$.
+Let $x_0'$ denote the value of variable $x$ in period 0 after the permanent increase in $y$. 
+By~\eqref{eq:endowment_exer_impat I}
+\[
+c'_0-c_0 = \frac{(1-\beta)(1+r)}{r}\left[y'-y\right]>\left[y'-y\right]
+\]
+Because  $\beta(1+r)<1$, we have $(1-\beta)(1+r)>r$, that is, $c_0$ increases by more than one-for-one in response of the output shock. By constrast, if $\beta(1+r)=1$, then in response to a permanent increase in $y$, $c_0$ increases one for one. 
+\[
+tb'_0-tb_0= (y'-y) - (c'_0-c_0) <0
+\]
+The trade balance deteriorates. 
+\[
+ca'_0-ca_0= tb'_0-tb_0 <0
+\]
+The current account deteriorates.
+\[
+d'_0-d_0= (c'_0-c_0)-(y'-y) >0
+\]
+Debt expands on impact. 
+
+
+\item 
+Consumption declines over time  and converges again to  $\bar{c}$. 
+\[
+c'_t-\bar{c} = (\beta (1+r))^t (c'_0-\bar{c}); \quad \mbox{ and } \quad c'_t - c_t = (\beta (1+r))^t (c_0'-c_0)
+\]
+The response of debt is monotonically increasing and converges to $(y'-y)/r$.
+\[
+d'_t - d_t = \left[1 - [\beta (1+r)] ^{t+1}\right] \frac{(y'-y)}{r}
+\]
+ Since $d_t = d_{-1}=(y-\bar{c})/r$ this means that external debt keeps growing and converges to the  higher value:    $(y' - y)/r + (y-\bar{c})/r= (y'-\bar{c})/r > (y-\bar{c})/r$.
+
+
+
+ The response of  current account is negative and converges to 0. 
+\[
+ca'_t -ca_t = - \frac{y'-y}{r} [\beta(1+r)]^t \left(1-\beta(1+r)\right)
+\]
+Since $ca_t=0$ for all $t$, it follows that the $ca'_t$ is negative  on impact and that it converges monotonically from below to 0, that is, it is monotonically increasing. 
+
+The trade balance: 
+\[
+tb'_t = y'-\bar{c} -(\beta (1+r))^t (c'_0-\bar{c}); \quad \mbox{ and } \quad tb'_t - tb_t = (y'-y) \left[1- (\beta (1+r))^t  \frac{(1-\beta)(1+r)}{r}  \right]
+\]
+In the long run the difference in the trade balance converges to $y'-y$. This means that the entirety to the increase in output will go to pay interest on the permanently higher level of external debt. 
+Note that initially the response of the trade balance is negative, but  at some $t$ it flips sign from negative to  positive. That is, first it deteriorates relative to before the shock, and later the trade balance is higher than before the shock. 
+
+%See also my hand drawn graphs from ipad, file Exercise 2.10 of USG (2017).pdf in the directory: Z:\uribe\book\endowment.
+\end{enumerate}
+\end{quote}
+\end{exercise}
+
+\begin{exercise}[Impatience and the Current Account, II]
+Consider an open economy inhabited by a 
+\label{exercise:endowment_impatient}
+large number of identical, infinitely-lived households with preferences given by the utility function
+\[
+\sum_{t=0}^{\infty}\beta^t \ln c_t,
+\]
+where $c_t$ denotes consumption in period $t$, $\beta\in(0,1)$ denotes the subjective discount factor, and $\ln$ denotes the natural logarithm operator. Households are endowed with a constant amount of goods $y$ each period and can borrow or lend at the constant world interest rate $r>0$ using one-period bonds. Let $d_t$ denote the amount of debt acquired
+by the household in  period $t$, and $(1+r)d_t$, the associated gross obligation in $t+1$.   Assume that households start period 0 with no debts or assets ($d_{-1}=0$) and that they are subject to a no-Ponzi-game constraint of the form 
+$\lim_{t\rightarrow \infty}(1+r)^{-t}d_t\le 0$. 
+Suppose that 
+\[\beta(1+r)<1.\]
+
+\begin{enumerate}
+\item Characterize the equilibrium path of consumption. In particular, calculate $c_0$, $c_{t+1}/c_t$ for $t\ge 0$, and $\lim_{t\rightarrow \infty}c_t$ as functions of the structural parameters of the model, $\beta$, $r$, and $y$.  Compare this answer to the one that would obtain under the more standard assumption  $\beta (1+r) = 1$ and provide intuition. 
+\item Characterize the equilibrium path of net external debt. In particular,  deduce whether debt is increasing, decreasing, or constant over time and calculate $\lim_{t\rightarrow \infty} d_t$. Solve for the equilibrium level of $d_t$ as a function of $t$ and  the structural parameters of the model. 
+\item Define the trade balance, denoted $tb_t$,  and characterize its equilibrium dynamics. In particular, deduce whether it is increasing, decreasing, or constant, positive or negative, and compute $\lim_{t\rightarrow \infty} tb_t$, as a function of the structural parameters of the model. 
+\end{enumerate}
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%
+\begin{quote}
+{\bf Answer:} 
+
+\begin{enumerate}
+\item 
+
+The sequential  resource constraint is 
+\[
+d_t = (1+r)d_{t-1} + c_t -y.
+\]
+Iterating forward and using the no-Ponzi-game constraint and the assumption that $d_{-1}=0$, yields
+\[
+0 = \sum_{t=0}^{\infty} (1+r)^{-t}(y-c_t). 
+\]
+The path of consumption is the solution of the problem of maximizing the utility function subject to this constraint. The first-order condition associated with this problem is
+\[
+\beta^tc_t^{-1}=\lambda (1+r)^{-t},
+\]
+for $t\ge 0$, where $\lambda$ is an endogenously determined constant. This expression implies that 
+\[
+\frac{c_{t+1}}{c_t} = \beta(1+r)<1,
+\]
+for $t\ge 0$, 
+which, in turn, implies that
+\[
+\lim_{t\rightarrow \infty} c_t= 0.
+\]
+Plugging these two results in the intertemporal resource constraint derived above gives
+\begin{eqnarray*}
+0&=&  \sum_{t=0}^{\infty}
+(1+r)^{-t}\{y-[\beta(1+r)]^tc_0\}
+\\&=&
+y\sum_{t=0}^{\infty}
+(1+r)^{-t} -c_0 \sum_{t=0}^{\infty}
+\beta^t \\
+&=& \frac{1+r}r y-\frac1{1-\beta}c_0,
+\end{eqnarray*}
+which implies the following solution for the initial level of consumption
+\[
+c_0 = (1-\beta)\frac{1+r}r y>y.
+\]
+Recall that $y$ is the constant equilibrium  path of consumption under the more standard assumption  $\beta(1+r)=1$.  Thus, summing up, we have that when $\beta(1+r)<1$,  consumption is initially higher than its equilibrium value under the assumption $\beta(1+r)=1$, and then gradually falls to zero at the gross rate $\beta(1+r)<1$. Intuitively, households in this economy are impatient relative to the market discount factor $1/(1+r)$, and, as a result, consume a lot at the beginning and nothing at the `end' of their never-ending lives. A story similar to that in the 1995 movie  `Leaving Las Vegas,' but in infinite horizon. 
+
+\item 
+In period 0, we have that 
+\[
+d_0 = c_0-y=\frac yr - \beta \frac{1+r}ry. 
+\]
+We calculated before that $c_0>y$, so we have that  $d_0>0=d_{-1}$. Thus, debt increases in period 0. Now consider the long run. Taking the limit
+of the left- and right-hand sides of the sequential resource constraint for $t\rightarrow \infty$, we get
+\[
+\lim_{t\rightarrow \infty}d_t
+ =
+ (1+r) \lim_{t\rightarrow \infty}d_t+\lim_{t\rightarrow \infty}c_t -y.
+\]
+Recalling that $\lim_{t\rightarrow \infty}c_t=0$, we obtain
+\[\lim_{t\rightarrow \infty}d_t = \frac yr>d_0.\]
+The long-run value of debt is higher than its value in period 0. It can be shown that the convergence is monotonic and dictated by the equation
+\[
+d_t = \frac yr
+\left\{
+1-[\beta (1+r)]^{t+1}
+\right\}.
+\]
+The proof is by induction. We already showed that it holds for $t=0$, that is, $d_0 = \left\{1-[\beta(1+r)]^{1+0}\right\}y/r$. Suppose it holds for an arbitrary $t \ge 0$, then we need to show it also holds for $t+1$. By the budget constraint: 
+\begin{eqnarray*}
+d_{t+1} & = & (1+r) d_t + c_{t+1} - y\\
+d_{t+1} & = & (1+r) d_t + \beta^{t+1}(1+r)^{t+1} (1-\beta) (1+r) \frac{y}{r} - y\\
+&= & (1+r) \left[1-\beta^{t+1}(1+r)^{t+1}\right] \frac{y}{r}+ \beta^{t+1}(1+r)^{t+2} (1 - \beta) \frac{y}{r} - y\\
+&=& \left[1-\beta^{t+1}(1+r)^{t+2}\right] \frac{y}{r}+ \beta^{t+1}(1+r)^{t+2} (1 - \beta) \frac{y}{r}\\
+&=& \left[1-\beta^{t+2}(1+r)^{t+2}\right] \frac{y}{r}
+\end{eqnarray*}
+Suppose one had been unsure that debt converences to a constant, the above solution for $d_t$ also shows it. 
+
+\item 
+The trade balance is defined as $tb_t = y-c_t$. 
+The initial trade balance is negative, since, as shown above, $c_0>y$. Since consumption is monotonically decreasing, we have that the trade balance  improves monotonically. At some point it turns into a surplus. In the long run, the trade balance equals the endowment $y$. 
+\end{enumerate}
+\end{quote}
+\end{exercise}
+
+\begin{exercise}[Global Approximation  of Equilibrium Dynamics]
+%Note: There is Matlab code in the directory: Z:\uribe\book\endowment\vfi that solves this 
+This exercise is concerned with  numerically approximating the equilibrium dynamics of a small open endowment economy by value-function iterations. 
+
+\begin{enumerate}
+\item Consider an endowment, $y_t$, following the AR(1)  process
+\[
+y_t -1 = \rho (y_{t-1}-1) + \sigma_{\epsilon}\epsilon_t,
+\]
+where 
+$\epsilon_t$ is an i.i.d.\ innovation with mean zero and unit variance,  
+$\rho\in[0,1)$,  and  $\sigma_{\epsilon}>0$. 
+
+ Discretize  this process by a two-state Markov process defined by the  2-by-1 state vector $Y\equiv [Y_1\, \,Y_2]'$ and the 2-by-2  transition probability matrix $\Pi$ with
+element 
+ $(i,j)$ denoted $\pi_{ij}$ and  
+given by 
+$\pi_{ij} \equiv \mbox{Prob}\{y_{t+1}=Y_j|y_t=Y_i\}$. To reduce the number of parameters of the Markov process to two, impose the restrictions $\pi_{11}=\pi_{22}=\pi$, $Y_1= 1+\gamma$ and $Y_2=1-\gamma$. Pick $\pi$ and $\gamma$ to match the variance and the serial correlation of $y_t$. Express $\pi$ and $\gamma$ in terms of the parameters defining the original AR(1) process. 
+
+\item Calculate the unconditional probability distribution of $Y$ (this is a 2-by-1 vector). 
+
+\item \label{item:endowment_tpm}
+Assume that $\rho=0.4$ and $\sigma_{\epsilon}=0.05$. Evaluate the vector $Y$ and the matrix $\Pi$. 
+
+\item Now consider a small open economy populated by a large number of identical households with preferences given by
+\[
+E_0 \sum_{t=0}^{\infty}
+\beta^t \frac{c_t^{1-\sigma}-1}{1-\sigma}, 
+\]
+ Suppose that households face the sequential budget constraint
+\[
+c_t + g + (1+r)d_{t-1} = y_t + d_t,
+\]
+where $c_t$ denotes consumption in period $t$, $d_t$ denotes one-period debt assumed in period $t$ and maturing in $t+1$, $g$ denotes a constant level of domestic absorption that yields no utility to households (possibly
+wasteful  government spending), and $r$ denotes the world interest rate, assumed to be constant and  exogenous. 
+Households are subject to  the no-Ponzi-game constraint 
+$\lim_{j\rightarrow\infty}(1+r)^{-j}d_{t+j}\le0$. 
+Express the household's problem as a Bellman equation. To this end, drop time subscripts and use instead the notation  $d=d_{t-1}$, $d'=d_t$, $y=y_t$ and $y'=y_{t+1}$ for all $t$. 
+Denote the value function in $t$ by $v(y,d)$.  [Here it  suffices to use the notation $y$ and $y'$ because the endowment process is AR(1). Higher-order processes would require an extended notation.]
+
+\item Let $\sigma=2$, $r=0.04$,   $\beta=0.954$, and $g=0.2$.  And assume that the endowment process follows the two-state Markov process given in item~\ref{item:endowment_tpm}. 
+Discretize the debt state, $d$, using  200 equally spaced points ranging from 
+15 to 19.  Calculate the value function and the debt policy function by value function iteration (these are 2 vectors, each of order 400-by-1). Calculate also the policy functions of consumption, the trade balance, and the current account
+(each of these policy functions is a 400-by-1 vector).  Calculate the transition probability matrix of the state $(y,d)$ (this is a 400-by-400 matrix, whose rows all add up to unity; each row has only 2 nonzero entries). 
+
+\item Define the impulse response of the variable $x_t$ to a one-standard-deviation increase in output as $E[x_t|y_0=Y_1]-E[x_t]$ for $t=0,1,2,\dots$ (note that these expectations are unconditional with respect to debt; alternatively, we could have conditioned on some value of debt, but we are not pursuing this definition here). Make a figure with 4 subplots (in a 2-by-2 arrangement) showing the impulse responses of output, consumption, the trade balance,and debt for $t=0,1,\dots,10$. 
+
+\item Plot the unconditional probability distribution of debt. \label{item:endowment_unconditional_prob_distrib_d}
+
+\item Finally, suppose that government spending, $g$, increases from 0.2 to 0.22. Plot the resulting 
+unconditional distribution of debt. For comparison superimpose the one corresponding to the baseline case $g=0.2$. Provide intuition for the differences you see.
+\end{enumerate} 
+
+\begin{quote}
+{\bf Answer: }There is Matlab code in the directory: \verb7 endowment\vfi 7 that solves this exercise. 
+
+To be completed. 
+\end{quote}
+
+\end{exercise} 
+
+\begin{exercise}[Determinants of the World Interest Rate]
+Throughout this chapter, we have studied small open economies in which the world interest rate is given. This exercise aims at illustrating the forces determining this variable. 
+
+Consider a two-period world composed of a continuum of countries indexed by $i\in[0,1]$.  
+Each country is populated by a large number of identical households with preferences given by
+\[
+\ln(c^i_1) + \beta \ln(c^i_2),
+\]
+where $c^i_1$ and $c^i_2$ denote  consumption
+of a perishable good in country $i$ 
+ in periods 1 and 2, respectively, and $\beta\in(0.1)$ is the subjective discount factor.  Households start period 1 with a nil net debt position. In period 1, they can borrow or lend in the international
+financial market via a debt instrument, denoted $d^i_1$,  that matures  in period 2 and carries  the  interest rate $r$. 
+ The interest rate $r$ is  exogenous to each country $i$. %We should have said households in each country take the interest rate $r$ as given. 
+In period 1, 
+each household receives an endowment of goods $y^i_1=y_1+\epsilon^i$, where $y_1$ is the world component of the endowment and $\epsilon^i$ is a country-specific component satisfying $\int_0^1\epsilon^idi=0$. In period 2, the endowment
+has no idiosyncratic component and 
+ is given by $y^i_2=y_2$. 
+Finally, households are subject to a no-Ponzi-game constraint 
+that forbids them to end period 2 with a positive debt position, that is, they are subject to the constraint  $d^i_2\le0$, where $d^i_2$ denotes the debt assumed in period 2. 
+
+\begin{enumerate}
+\item Write down and solve the household's optimization problem in country $i$, given $r$.   
+\item Derive the  equilibrium levels of the trade balance, the current account, and external debt in periods 1 and 2 in country $i$ given $r$. 
+\item Write down the world resource constraints in periods 1 and 2.
+\item Derive the equilibrium level of the world interest rate, $r$. 
+\item Suppose now that output in period 1 in country $i$ increases by $x>0$, that is, $\Delta y^i_1=x$. Derive the effect of this shock on the trade balance and the level of external debt in period 1 in country $i$ and on the world interest rate under the   following two alternative cases: 
+\begin{enumerate}
+\item A country-specific endowment shock, $\Delta y^i_1=\Delta \epsilon^i=x$ and $\Delta y_1=0$.  
+\item A world endowment shock, $\Delta y^i_1 = \Delta y_1 = x$, and $\Delta \epsilon^i=0$. 
+\end{enumerate}
+Provide a discussion of your results. 
+\end{enumerate}  
+\begin{quote}
+{\bf Begin Answer:}
+
+\begin{enumerate}
+\item 
+\begin{align*}
+\max\ &\ln(c^i_1) +\beta \ln(c^i_2) \\
+\text{s.t.}\ & c^i_1  = y^i_1 + d^i_1 \\
+& c^i_2 + (1+r)d^i_1 = y^i_2 + d^i_2\\
+& d^i_2 \le 0
+\end{align*}
+Note that the last condition should hold  with equality. So, using that the debt in the second period is equal to zero, the optimization problem becomes:
+\begin{align*}
+\max\ &\ln(c^i_1) +\beta \ln(c^i_2) \\
+\text{s.t.}\ & c^i_1  = y^i_1 + d^i_1 \\
+& c^i_2 + (1+r)d^i_1 = y^i_2
+\end{align*}
+We can write down a Lagrangian for this optimization problem:
+\begin{equation*}
+\mathcal{L} = \ln(c^i_1) +\beta \ln(c^i_2) - \lambda_1 (c^i_1  -  y^i_1 - d^i_1) - \lambda_2 (c^i_2 + (1+r)d^i_1 - y^i_2)
+\end{equation*}
+First-order conditions:
+\begin{align*}
+& \frac{1}{c^i_1} -\lambda_1 = 0 \\
+& \beta\frac{1}{c^i_2} - \lambda_2 = 0 \\
+& \lambda_1 - (1+r)\lambda_2 = 0 \\
+& c^i_1  = y^i_1 + d^i_1 \\
+& c^i_2 + (1+r)d^i_1 = y^i_2
+\end{align*}
+From here we can derive the Euler equation:
+\begin{align*}
+\frac{1}{c^i_1} = (1+r)\beta\frac{1}{c^i_2} \\
+c^i_2 = c^i_1 (1+r)\beta
+\end{align*}
+Then using the budget constraints for the first and second period, we obtain:
+\begin{align*}
+&c^i_1 = \frac{1}{(1+r)(1+\beta)}(y^i_2 +(1+r)y^i_1) \\
+&c^i_2 = \frac{\beta}{(1+\beta)}(y^i_2 +(1+r)y^i_1) \\
+& d^i_1 = \frac{1}{(1+r)(1+\beta)}(y^i_2 - \beta(1+r)y^i_1)
+\end{align*}
+
+\item  The external debt is given by:
+\begin{align*}
+&d^i_1 = \frac{1}{(1+r)(1+\beta)}(y^i_2 - \beta(1+r)y^i_1)\\
+& d^i_2 = 0
+\end{align*}
+Trade balance is equal to:
+\begin{align*}
+&tb^i_1 = y^i_1 - c^i_1 = \frac{1}{(1+r)(1+\beta)}(\beta(1+r)y^i_1 - y^i_2) \\
+& tb^i_2 = y^i_2 - c^i_2 = \frac{1}{(1+\beta)}(y^i_2 - \beta(1+r)y^i_1)
+\end{align*}
+The current account is equal to:
+\begin{align*}
+&ca^i_1 =tb^i_1 - rd^i_{0} =  \frac{1}{(1+r)(1+\beta)}(\beta(1+r)y^i_1 - y^i_2) \\
+&ca^i_2 =tb^i_2 - rd^i_{1} =  \frac{1}{(1+r)(1+\beta)}(y^i_2 - \beta(1+r)y^i_1)  \\
+\end{align*}
+\item 
+A single country resource constraints are given by:
+\begin{align*}
+& c^i_1 = y^i_1 + d^i_1\\
+& c^i_2 + (1+r)d^i_1 = y^i_2
+\end{align*}
+These resource constraints can be integrated over countries to obtain:
+\begin{align*}
+& \int c_1^idi = \int y_1^idi + \int d_1^idi \\
+& \int c_2^idi + (1+r)\int d_1^i di= \int y_2^idi \\
+\end{align*}
+Due to the fact that we consider an endowment economy, bonds are in zero-net supply, therefore, $\int d_1^i di= 0$. 
+\\ Recalling the formula for the income, we note that $\int y_1^i = y_1 + \int\varepsilon_1^i = y_1$. We then can rewrite the World budget constraints to be:
+\begin{align*}
+& c_1 =  y_1 \\
+& c_2 = y_2
+\end{align*}
+
+
+\item 
+ Recall from a single country optimization problem that:
+\begin{align*}
+&d^i_1 = \frac{1}{(1+r)(1+\beta)}(y^i_2 - \beta(1+r)y^i_1)
+\end{align*}
+We then can integrate both sides of the equation to obtain:
+\begin{align*}
+&0 = \frac{1}{(1+r)(1+\beta)}(y_2 - \beta(1+r)y_1)
+\end{align*}
+The world interest rate is then given by:
+\begin{align*}
+& r = \frac{y_2}{\beta y_1} - 1
+\end{align*}
+The equation $(1+r)\beta = 1$ would  hold if $y_1 = y_2$. 
+\\ If $y_1 > y_2$ then $(1+r)\beta<1$. The interest rate falls to make consumption tomorrow more costly and making it optimal to consume tomorrow less than will be consumed today.
+\\ In the reverse case, the interest rate is high to make consumption today more costly and make it optimal to consume more tomorrow. 
+\\ Note that in this case only "shocks to the aggregate income" matter for the value of the interest rate and whether the consumption is perfectly smoothed across periods.
+\item Two cases: 
+\begin{enumerate}
+\item 
+ The world interest rate does not depend on the country-level shocks, therefore, the interest rate stays the same.
+ \\ Recall from the previous section that country-level debt can be expressed as:
+ \begin{align*}
+& d^i_1 = -\frac{\beta \varepsilon_1^i}{1+\beta}
+\end{align*} 
+That means that if country-specific component increases, external debt decreases.
+\\ Since:
+\begin{align*}
+&tb^i_1 = ca^i_1 =  -d_1^i = \frac{\beta \varepsilon_1^i}{1+\beta}
+\end{align*}
+Trade balance and current account both increase.
+\item 
+ consider the equation for the world interest rate:
+\begin{align*}
+& r = \frac{y_2}{\beta y_1} - 1
+\end{align*}
+The world interest rate depends negatively on $y_1$, therefore, it will decrease when $y_1$ increases.
+\\ The external debt of a country $i$ is given by:
+ \begin{align*}
+&d^i_1 = \frac{1}{(1+r)(1+\beta)}(y^i_2 - \beta(1+r)y^i_1)
+\end{align*}
+Replace the interest rate in terms of aggregate income to obtain:
+ \begin{align*}
+& d^i_1 = -\frac{\beta \varepsilon_1^i}{1+\beta}
+\end{align*}
+Therefore, country debt will not change.
+\begin{align*}
+&tb^i_1 = ca^i_1 =  -d_1^i = \frac{\beta \varepsilon_1^i}{1+\beta}
+\end{align*} 
+ Trade balance and current account will not change as well.
+\end{enumerate}
+
+Comparison:  When the world component of the output increases, the whole world would like to save to ensure consumption smoothing. However, because there is no additional demand for funds, the interest rate goes down to ensure that the world market for savings clears. Consumption in period 2 becomes more expensive and consumers find it optimal consume all the additional income.
+\\ In the case of the country-specific shock, only one country wants to save more. All the countries are infinitely small, so there is no impact on the world interest rate. Country $j$  will save more to smooth the additional income over two periods.
+\end{enumerate}  
+\end{quote}
+\end{exercise} 
+
+stopped here on Tuesday January 28, 2025 @1:45pm
+
+To do 2.14, 2.15, 2.16, 2.17
+
+\end{document}
+
+
+
+\begin{exercise}[Leontief Preferences Over Discounted Period Utilities]
+Consider  a perfect-foresight small open economy populated by a large number of identical households with preferences described by the utility
+function
+\[
+ \min_{t\ge0} 
+\left\{\beta^tc_t\right\},
+\]
+where  $c_t$ denotes consumption in period $t$,  and $\beta\in(0,1)$ is a parameter. 
+ Households have access to the international financial market, where they can borrow or lend at the constant interest rate $r$. Assume that 
+\[
+\beta(1+r)=1+\gamma,
+\]
+where $\gamma>0$ is a parameter.  Households are endowed with a constant amount of  consumption goods denoted   by $y$ each period  and  start period 0 with a level of debt
+equal to  $d_{-1}>0$.  
+Finally, 
+households are subject to a  no-Ponzi-game constraint of the form $\lim_{t\rightarrow\infty}(1+r)^{-t}d_t\le 0$, where $d_t$ denotes 
+one-period debt  acquired in period $t$ and maturing in $t+1$. 
+\begin{enumerate}
+\item Formulate the household's maximization problem. 
+
+\begin{quote}
+{\bf Start Answer: } 
+\[
+\max\{ \min_{t\ge0} 
+\left\{\beta^tc_t\right\}
+\}
+\]
+subject to 
+\[
+c_t + (1+r) d_{t-1}  = y + d_t
+\]
+and no Ponzi
+
+{\bf End of answer}
+\end{quote}
+\item Write down the complete set of optimality conditions. 
+\begin{quote}
+{\bf Start Answer: } 
+\[
+\beta^tc_t = \beta^{t'} c_{t'}
+\]
+for all $t, t'\ge 0$. 
+
+Intertemporal budget constraint. 
+\[
+ (1+r) d_{-1} = \sum_{t=0}^{\infty} 
+\frac{
+y-c_t
+}
+{(1+r)^t}
+\]
+
+{\bf End of answer}
+
+\end{quote}
+
+\item Characterize the equilibrium paths of consumption and debt in this economy. 
+In particular, express the equilibrium levels of  $c_t$ and $d_t$, for $t\ge0$, in terms of the structural parameters (possibly $\beta$, $r$, $\gamma$, and $y$)  and  the initial condition $d_{-1}$. 
+
+
+\begin{quote}
+{\bf Answer: } 
+\[
+c_t = \beta^{-t} c_0.
+\]
+Life-time utility then is
+\[
+\min_{t\ge0} \left\{\beta^ c_t \right\} = \min_{t\ge0} \left\{ \beta^t (\beta^{-t} c_0)\right\} = c_0
+\]
+Now pick $c_0$ so that it satisfies the eqm intertemporal budget constraint. 
+Intermediate steps.
+\[
+\sum_{t=0}^{\infty} 
+\frac{
+y
+}
+{(1+r)^t}
+= 
+\frac{1+r}{r} y
+\]
+\[
+\sum_{t=0}^{\infty} 
+\frac{
+c_t
+}
+{(1+r)^t}
+= 
+\sum_{t=0}^{\infty} 
+\frac{
+c_0
+}
+{[\beta(1+r)]^t}
+=
+\sum_{t=0}^{\infty} 
+\frac{
+c_0
+}
+{(1+\gamma)^t} 
+= \frac{1+\gamma}{\gamma} c_0
+\]
+With those intermediate results in hand we can write the eqm intertemporal budget constraint as 
+\[
+ (1+r) d_{-1} = \frac{1+r}{r} y - \frac{1+\gamma}{\gamma} c_0
+\]
+Solve for $c_0$ to obtain: 
+\[
+c_0 = \left(\frac{\gamma}{1+\gamma}\right) \, \left( \frac{1+r}{r}\right) \, (y -r d_{-1})
+\]
+This is the equilibrium value of $c_0$ in terms of $\beta$, $r$, $\gamma$, $y$ and  the initial condition $d_{-1}$. 
+And for $t\ge 0$
+\[
+c_t = \beta^{-t}  c_0
+\]
+With $c_t$ in hand we can find the path of $d_t$. Proceed as follows. For $t=0$, use the sequential budget constraint and solve for $d_0$, which only requires knowledge of $c_0$, $y$, and $d_{-1}$. Once you know $d_0$, use the sequential budget constraint in $t=1$ to find $d_1$. Proceed in this way to find the entire sequence of $d_t$.  
+{\bf End of answer}
+\end{quote}
+\item What is the equilibrium asymptotic growth rate of the economy's net asset position? How does it compare to the equilibrium growth rate of consumption? 
+\begin{quote}
+{\bf Answer: } 
+The eqm intertemporal budget constraint must hold, not just in $t=0$ but for any period $t\ge0$. So we have
+\[
+c_t = \left(\frac{\gamma}{1+\gamma}\right) \, \left( \frac{1+r}{r}\right) \, (y -r d_{t-1})
+\]
+Get the change in assets (or minus debt) from sequential budget constraint
+\[
+c_t + (1+r) d_{t-1} = y + d_t
+\]
+Rearrange  and then plug the solution for $c_t$ from above
+\begin{eqnarray*}
+-d_t + d_{t-1} &=& y -r d_{t-1} - c_t \\
+ &=& y -r d_{t-1} - \left(\frac{\gamma}{1+\gamma}\right) \, \left( \frac{1+r}{r}\right) \, (y -r d_{t-1})\\
+& = &y -r d_{t-1} - \left(\frac{\gamma}{1+\gamma}\right) \, \left( \frac{1+r}{r}\right) \, (y -r d_{t-1})\\
+&=& \left[ 1- \left(\frac{\gamma}{1+\gamma}\right) \, \left( \frac{1+r}{r}\right) \right] (y -r d_{t-1})>0
+\end{eqnarray*}
+The term in square parenthesis is positive because $0<\gamma<r$. For $t=0$, $y-rd_{-1}>0$ by assumption. So the current account in period 0 is positive which means that debt declines or equivalently assets go up. therefore $y-rd_{t-1}>0$ for $t=1$. But then by induction it is positive for all $t$. 
+
+To finance a growing stream of consumption with a fixed endowment income, it must be that debt falls over time. In fact debt turns into assets and then grows without bounds but at a rate less that $r$. 
+
+Asymptotically the growth rate of assets ($-d_t$) is 
+\[
+\lim_{t\rightarrow \infty} \frac{(-d_t) - (-d_{t-1})}{-d_{t-1}}
+ = 
+\lim_{t\rightarrow \infty}  \left[ 1- \left(\frac{\gamma}{1+\gamma}\right) \, \left( \frac{1+r}{r}\right) \right]  \frac{(y -r d_{t-1})}{-d_{t-1}} 
+= r  \left[ 1- \left(\frac{\gamma}{1+\gamma}\right) \, \left( \frac{1+r}{r}\right) \right]
+\]
+which uses $\lim_{t\rightarrow \infty} y/d_{t-1} =0$ because $-d_{t-1}$ increases without bound. 
+The gross growth rate of $-d_t$ is equal to $1+r  \left[ 1- \left(\frac{\gamma}{1+\gamma}\right) \, \left( \frac{1+r}{r}\right) \right] = (1+r)/(1+\gamma)<1+r$. 
+
+The growth rate of consumption is $\beta^{-1} = (1+r)/(1+\gamma)$, which is the same as the asymptotic growth rate of assets. 
+
+{\bf End of answer}
+
+
+\end{quote}
+
+
+
+\item Suppose that in period 0 the economy unexpectedly experiences a permanent increase in the endowment from $y$ to $y+\Delta y$, with $\Delta y>0$. Derive the impact response of the trade balance. Briefly discuss your result. 
+\begin{quote}
+{\bf Answer: } 
+Step 1: Change in consumption in period 0
+\[
+\Delta c_0 = \left(\frac{\gamma}{1+\gamma}\right) \, \left( \frac{1+r}{r}\right)  \Delta y  < \Delta y 
+\]
+because $\left(\frac{\gamma}{1+\gamma}\right) \, \left( \frac{1+r}{r}\right)<1$. This follows from $\beta = (1+\gamma)/(1+r) <1$.  In words $c_0$ increases but by less than $y$. 
+Step 2: 
+\[
+\Delta tb_0 = \Delta y - \Delta c_0 = \left[1 - 
+\left(\frac{\gamma}{1+\gamma}\right) \, \left( \frac{1+r}{r}\right) \right] \Delta y >0
+\]
+This means that  a permanent increase in the level of income leads to an increase in the trade balance. Under the preferences used in class, namely, time separable and no impatience, we obtained the result that the trade balance was unchanged. What is the intuition? With Leontief preferences and  agents  more patient than the market ($\beta > 1/(1+r)$) households have an increasing path of consumption over time and to achieve this given that the increase in income is flat (or non-increasing over time), the only way to fund an increasing consumption path is to save more in period 0 and then to use only part of the additional interest income for additional consumption and using the remainder to save. 
+{\bf End of answer}
+\end{quote}
+
+\item Characterize the equilibrium under the assumption that $\gamma=0$. 
+\begin{quote}
+{\bf Answer: } 
+ When $\gamma=0$, no equilibrium with positive lifetime utility exists.
+
+
+{\bf End of answer}
+\end{quote}
+
+\end{enumerate}  
+\end{exercise}
+
+
+\begin{exercise}
+[Testing the Intertemporal Approach on Emerging Market Data]
+Use the data posted online with the materials for chapter~\ref{chapter:empirics} to test the empirical validity of the intertemporal approach to the current account in emerging countries. Specifically, extract quarterly data on output and the current account from an emerging country of your choice and apply the econometric tests studied in section~\ref{sec:endowment_testing}. Discuss your findings. Make sure to include a comparison with the results for Canada reported in the aforementioned  section. 
+\end{exercise}
+
+
+
+\begin{exercise}[Leontief Preferences for Consumption and Leisure]
+
+ Consider a small open economy inhabited by a large number of identical households with preferences described by the utility function
+\[
+\sum_{t=0}^{\infty} \beta^t \ln( x_t)
+\]
+with 
+\[
+x_t = \min\{c_t,1-h_t\},
+\]
+where $c_t$ denotes consumption in period $t$, 
+and $h_t$ denotes labor effort
+in period $t$ and is restricted to  reside in the interval $[0,1)$. 
+Households  produce goods with  the technology 
+\[
+y_t=h_t,
+\]
+ where $y_t$ denotes output. They can also borrow or lend 
+in one-period bonds that pay  the constant interest rate $r>0$. Let $d_t$ denote the debt acquired in $t$ and maturing in $t+1$. Assume that  households start period 0 with no debts or assets inherited from the past.  Borrowing is limited by the no-Ponzi-game constraint $\lim_{t\rightarrow \infty}(1+r)^{-t}d_t\le0$. Finally, assume that the subjective and market discount rates are equal to each other
+\[\beta = \frac1{1+r}.\]
+
+\begin{enumerate}
+\item Write down the household's optimization problem. 
+\item Derive the first-order conditions associated with the household's problem.
+\item Calculate the equilibrium levels of consumption and the trade balance. These should  be 2 numbers. 
+\item Now consider an environment  in which households are relatively impatient, in the sense that the subjective discount factor is larger than the market discount factor. Specifically assume that the interest rate is 10 percent ($r=0.1$) and that $\beta=1/1.2$.  Calculate the equilibrium levels  of consumption and the trade balance in period 0 and characterize their evolution over time. 
+\end{enumerate}
+
+\begin{quote}
+{\bf Sketch of Answer}
+\begin{enumerate}
+\item  The household's optimization problem is
+\[ \max \sum_{t=0}^{\infty} \beta^t \ln( x_t),\]
+subject to 
+\[
+x_t = \min\{c_t,1-h_t\}
+\]
+\[
+y_t = h_t
+\]
+\[
+d_t = (1+r) d_{t-1} +c_t -y_t
+\]
+and the no-Ponzi-game constraint. 
+\item It is optimal to set $c_t = 1-h_t$. So the household's problem becomes
+\[ \max \sum_{t=0}^{\infty} \beta^t \ln( c_t),\]
+
+\[
+d_t = (1+r) d_{t-1} +2c_t -1
+\]
+The first-order conditions associated with this problem are this sequential budget constraint, the no-Ponzi-game holding with equality, and 
+\[
+c_{t+1} = c_t 
+\]
+for all $t\ge0$. 
+\item Because consumption is constant over time, so is debt ($d_t=d_{-1}=0$ for $t\ge0$). Then, the sequential budget constraint implies that 
+\[c_t = h_t =\frac12.\]
+An the trade balance is
+\[tb_t = y-c_t = h_t-c_t=0.\]
+\item Now the first-order condition is
+\[c_{t+1} = \beta(1+r) c_t\]
+which is the same as before but with $\beta(1+r)\neq 1$. 
+The intertemporal resource constraint and the fact that $d_{-1}=0$ implies that
+\[
+0 = \sum_{t=0}^{\infty} (1+r)^{-t} 
+(2c_t -1)
+\]
+Combining the above two expressions, we get
+\[
+\frac{1+r}r = 2c_0 \frac1{1-\beta}
+\]
+or 
+\[
+c_0 = \frac12 \frac{1+r}r (1-\beta)
+\]
+Using the given parameter values, we get
+$c_0 = 0.917$. 
+The trade balance in period 0 is
+\[tb_0= y_0-c_0=h_0-c_0=1-2c_0=-0.833;\]
+From period 0 onward, consumption falls monotonically at the constant gross rate $\beta(1+r)$, which happens to be 0.917. Consumption converges monotonically to zero.  Since the trade balance is given by $1-2c_t$, we have that the trade balance improves monotonically and converges to 1. 
+\end{enumerate}
+\end{quote}
+\end{exercise}
+
+
+
+
+\begin{exercise}[Permanent Income Versus  Beverage-Nelson Decomposition]
+%This exercise is not in 1st edition 
+The file 
+endowment\_exercise\_Beverage\_Nelson.dat
+%produced by running endowment_exercise_Beverage_Nelson.m  
+%in z:\uribe\book\endowment
+posted online with the materials for the chapter contains a time series for output, 
+which will be denoted  $y_t$, for country X. The data is monthly from 1900:1 to 2020:12. 
+
+\begin{enumerate}
+\item Using OLS, estimate the AR(2) process for $\Delta y_t$
+\begin{equation}
+\tag{1}
+\Delta y_t = \rho_0 + \rho_1  \Delta y_{t-1}
++ \rho_2 \Delta y_{t-2} +  \epsilon_t.
+\end{equation}
+Report the regression results.   For the remainder of the exercise, ignore the intercept  $\rho_0$. 
+
+\begin{quote}
+{\bf Begin Answer: }
+
+\centerline{\begin{tabular}{lc}
+\hline
+$\Delta y_1$ & 0.518  \\
+& (0.026) \\
+$\Delta y_2$ & 0.169 \\
+& (0.026) \\
+const. & 0.000 \\
+& (0.000) \\
+\hline\hline
+\end{tabular}}
+%produced by running the stata code \verb?endowment_exercise_beverage_nelson.do ?
+%in z:\uribe\book\endowment
+
+{\bf End Answer.}
+\end{quote}
+
+
+\item  Is the estimated process for $\Delta y_t$ stationary? Show your work. 
+\begin{quote}
+{\bf Begin Answer: }
+
+ The conditions for AR(2) process stationarity are: $\rho_2 > -1$, $\rho_2<1-\rho_1$ and $\rho_2<1+\rho_1$. All three conditions are satisfied.
+
+{\bf End Answer.}
+\end{quote}
+
+\item Compute the coefficients of the cyclical component 
+of the 
+{\it Beverage-Nelson decomposition}, which is given by 
+ $y^c_t=y_t-\lim_{j\rightarrow  \infty}E_ty_{t+j}$.  (Hint: $y^c_t$ is a linear function of $\Delta y_t$ and $\Delta y_{t-1}$.)
+\begin{quote}
+{\bf Begin Answer: }
+After some algebra, the Beverage-Nelson decomposition can be written as
+\begin{equation*}
+y_t^c = - \sum_{j=1}^{\infty} E_t\Delta y_{t+j}
+\end{equation*}
+Let $Y_t = \begin{bmatrix} \Delta y_t \\ \Delta y_{t-1} \end{bmatrix} $  and $R = \begin{bmatrix}\rho_1 & \rho_2 \\ 1 & 0 \end{bmatrix}$ and rewrite the AR(2) process in a matrix form:
+\begin{equation*}
+Y_t = R Y_{t-1} + \begin{bmatrix} \varepsilon_t \\ 0 \end{bmatrix}
+\end{equation*}
+Then $E_t Y_{t+j} = R^j Y_{t}$ and the Beverage-Nelson cyclical component becomes:
+\begin{equation*}
+y_t^c = - \begin{bmatrix} 1 & 0 \end{bmatrix} \sum_{j=1}^{\infty} R^j Y_t =  - \begin{bmatrix} 1 & 0 \end{bmatrix} R (I - R)^{-1} Y_t
+\end{equation*}
+Then we can obtain that:
+\begin{equation*}
+y_t^c = - \frac{1}{1-\rho_1-\rho_2} ((\rho_1+\rho_2)\Delta y_t + \rho_2 \Delta y_{t-1})
+\end{equation*}
+
+
+\centerline{\begin{tabular}{lc}
+\hline
+\multicolumn{2}{c}{Coefficients for $y_t^c$} \\
+\hline
+$\Delta y_t$ & $-2.194$ \\
+$\Delta y_{t-1}$ & $-0.538$ \\
+\hline\hline
+\end{tabular}}
+%produced by running the   stata code \verb?endowment_exercise_beverage_nelson.do ?
+%in z:\uribe\book\endowment
+
+{\bf End Answer.}
+\end{quote}
+
+\item  Make a plot showing $y_t$ and its trend component. 
+(Hint: Use your answer to the last question and data to construct a time series for $y^c_t$. Then   demean $y^c_t$  before subtracting it from $y_t$.) 
+
+\begin{quote}
+{\bf Begin Answer: }
+Run the stata code \verb?endowment_exercise_beverage_nelson.do ?
+%located in z:\uribe\book\endowment
+
+{\bf End Answer.}
+\end{quote}
+
+\item Now  compute the  coefficients of the permanent component of output according to the open  endowment economy model studied in 
+in this chapter, which we denoted $y^p_t$. To this end, assume that the world interest rate is 4 percent per year
+ ($r= 1.04^{1/12}-1$). 
+\begin{quote}
+{\bf Begin Answer: }
+
+ Recall that:
+ \begin{equation*}
+ y_t^p = \frac{r}{1+r}\sum_{j=0}^{\infty} \frac{E_ty_{t+j}}{(1+r)^j}
+ \end{equation*}
+Note that $y_{t+j} = y_t + \sum_{k=1}^{j} \Delta y_{t+k}$, so the expression above can be written as:
+\begin{equation*}
+y_t^p =  \frac{r}{1+r}\sum_{j=0}^{\infty} \frac{y_t + \sum_{k=1}^{j} E_t \Delta y_{t+k}}{(1+r)^j} = y_t +\frac{r}{1+r}\sum_{j=0}^{\infty} \frac{\sum_{k=1}^{j} E_t \Delta y_{t+k}}{(1+r)^j}
+\end{equation*}
+Recall from the previous sections that $E_t \Delta y_{t+k} = \begin{bmatrix}1&0\end{bmatrix}R^k Y_t$.
+\\ Remember additionally that the sum of geometric series can be expressed as:
+\begin{equation*}
+\sum_{k=1}^{j} E_t \Delta y_{t+k} = \sum_{k=1}^{j}  \begin{bmatrix}1&0\end{bmatrix}R^k Y_t =  \begin{bmatrix}1&0\end{bmatrix}R (I-R^{j+1})(I-R)^{-1}
+\end{equation*}
+Then we can rewrite $y_{p}^t$ as:
+\begin{equation*}
+y_t^p = y_t + \frac{r}{1+r}\sum_{j=0}^{\infty} \frac{\sum_{k=1}^{j} E_t \Delta y_{t+k}}{(1+r)^j} = y_t + \begin{bmatrix}1&0\end{bmatrix}R (I-R)^{-1}Y_t + \begin{bmatrix}1&0\end{bmatrix}R^2(I-R)^{-1} \sum_{j=0}^{\infty}\frac{ R^{j}}{(1+r)^j}Y_t
+\end{equation*}
+Therefore, permanent income can be expressed as:
+\begin{equation*}
+y_t^p = y_t + \begin{bmatrix}1&0\end{bmatrix}R (I-R)^{-1}Y_t + \begin{bmatrix}1&0\end{bmatrix}R^2(I-R)^{-1} (I - R/(1+r))^{-1}Y_t
+\end{equation*}
+Then we can simplify into:
+\begin{align*}
+y_t^p = y_t + &\frac{1}{1-\rho_1-\rho_2} ((\rho_1+\rho_2)\Delta y_t + \rho_2 \Delta y_{t-1}) +
+\\ + & \frac{1+r}{(1-\rho_1-\rho_2)(1+r-\rho_1-\rho_2)}\left[((\rho_1+\rho_2)^2+\rho_2)\Delta y_t + \left(\rho_1\rho_2 + \rho_2^2+\frac{\rho_2^2}{1+r}\right)\Delta y_{t-1} \right]
+\end{align*}
+
+\centerline{\begin{tabular}{lc}
+\hline
+\multicolumn{2}{c}{Coefficients for $y_t^p$} \\
+\hline
+$\Delta y_t$ & $8.681$ \\
+$\Delta y_{t-1}$ & $1.998$ \\
+\hline\hline
+\end{tabular}}
+%Produced by running  the stata code \verb?endowment_exercise_beverage_nelson.do ?
+%in z:\uribe\book\endowment
+
+{\bf End Answer.}
+\end{quote}
+
+\item On the same graph, plot the trend according to the model, $y^p_t$. Comment on any differences you can optically  identify about the two ways to compute the trend. 
+
+\begin{quote}
+{\bf Begin Answer: }
+
+
+%\centerline{\includegraphics[scale=0.2]{hw1p2.jpg}}
+Run the   stata code \verb?endowment_exercise_beverage_nelson.do ?
+%in z:\uribe\book\endowment
+The second computation yields a more volatile time series.
+
+{\bf End Answer.}
+\end{quote}
+
+
+\item According to the open economy model of studied in this chapter, does this 
+estimated endowment process (1) generate a countercyclical current account, as observed in the data?   (Hint: Calculate the effect of a unit increase in $\epsilon_t$ on $ca_t$, and interpret it.)
+
+\begin{quote}
+{\bf Begin Answer: }
+
+ Recall that
+\begin{equation*}
+ca_t = y_t - y_t^p
+\end{equation*}
+The effect of $\varepsilon_t$ on the current account is equal to:
+\begin{equation*}
+ca_t = - \left[ \frac{1}{1-\rho_1-\rho_2} (\rho_1+\rho_2)  + \frac{1+r}{(1-\rho_1-\rho_2)(1+r-\rho_1-\rho_2)}((\rho_1+\rho_2)^2+\rho_2) \right] \varepsilon_t = -\mu \varepsilon_t
+\end{equation*}
+Coefficient is negative, therefore, the response of the current account is countercyclical.
+
+{\bf End Answer.}
+\end{quote}
+
+
+\item According to the open economy model studied in this chapter,
+does the estimated  endowment process (1)  generate excess consumption volatility? (Hint: Calculate
+$\sigma_{\Delta c}/\sigma_{\Delta y}$ and provide interpretation.)
+
+\begin{quote}
+{\bf Begin Answer: }
+
+Recall that:
+\begin{equation*}
+\Delta c_t = \Delta y_t^p
+\end{equation*}
+Then variance can be written as:
+\begin{equation*}
+\text{var}(\Delta c_t) = \text{var}(\Delta y_t^p) = \text{var}(\Delta y_t + \mu (\Delta y_t-\Delta y_{t-1})) = (1+\mu)^2 \text{var}(\Delta y_t)
+\end{equation*}
+$\mu>0$, therefore, this process generates excess consumption volatility.
+
+{\bf End Answer.}
+\end{quote}
+\end{enumerate}
+\end{exercise} 
+
+
+

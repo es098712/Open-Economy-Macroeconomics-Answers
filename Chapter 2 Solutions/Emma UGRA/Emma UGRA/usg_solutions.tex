@@ -1,0 +1,91 @@
+%USG_solutions.TEX
+\documentclass[11pt]{book}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{assumption}{Assumption}
+
+\includeonly{endowment_solutions}
+
+
+\oddsidemargin 0in
+\evensidemargin 0in
+\textwidth 6.5 in
+
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{fact}{Fact}
+\newtheorem{exercise}{Exercise}[chapter]
+
+\renewcommand{\sectionmark}[1]{{}{}}
+
+\input{epsf}
+\def\cite{\par\noindent\hangindent=\parindent\hangafter=1}
+\def\aref#1/ #2/ #3/ #4/ #5/ #6\par{\cite{{#1,} {``#2,''} {\textit{#3}} {#4,}
+{#5,} {#6} }}
+
+\def\aibref#1/ #2/ #3/ #4/ #5\par{\cite{{#1,} { ``#2,''} {in #3,} {\it{#4},}
+{#5} } }
+
+
+\def\wref#1/ #2/ #3/ #4\par{\cite{{#1,} {``#2,''} {#3,} {#4}}}
+
+\def\bref#1/ #2/ #3/ #4\par{\cite{{#1,} {\it #2,} {#3,} { #4}}}
+
+\usepackage{gensymb}
+\usepackage{subfig}
+\usepackage{longtable}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{verbatim}
+\usepackage{setspace}
+\usepackage{ulem}
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage[pdftex, colorlinks=true, linkcolor=blue]{hyperref}
+
+\DeclareMathOperator*{\argmax}{argmax}
+
+\renewcommand{\chaptermark}[1]{\markboth{\today, M.  Uribe and S. Schmitt-Groh\'e
+}{Open Economy  Macroeconomics, Chapter \thechapter}}
+
+
+\title{{\Huge \itshape  Open Economy Macroeconomics}\thanks{In preparation for  Princeton University Press.}}
+
+ \author{
+Mart\'{\i}n Uribe\thanks{Columbia University and NBER.  E-mail: martin.uribe@columbia.edu.} \and
+Stephanie Schmitt-Groh\'e\thanks{Columbia University, CEPR, and NBER. E-mail: stephanie.schmittgrohe@columbia.edu.}}
+\date{\today\\
+}
+
+%\clearpage \thispagestyle{plain} \par\vspace*{.35\textheight}{\centering Dedicated to my parents\par} \chapter*{Acknowledgements} A lot of people helped me.
+
+\begin{document}
+
+%\graphicspath{{z:/uribe/book/figures/}}
+
+%\frontmatter
+%\maketitle
+%\tableofcontents
+%\mainmatter
+\doublespacing
+
+\include{preface}
+\include{empirics}
+\include{endowment}
+\include{endowment_solutions}
+
+\include{capital}
+\include{soe_rbc}
+\include{soe_rbc_emerging}
+\include{irs}
+\include{tot}
+\include{rer}
+\include{dnwr}
+\include{capital_controls}
+\include{credibility}
+\include{overborrowing}
+\include{sovereign_debt}
+\include{list_of_references}
+
+
+\end{document}
