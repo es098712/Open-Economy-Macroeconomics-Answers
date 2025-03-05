@@ -3,6 +3,22 @@ Answers to "Open Economy Macroeconomics" by Martin Uribe and Stephanie Schmitt-G
 
 # README: Cloning a GitHub Repository and Editing LaTeX Files
 
+## Table of Contents
+- [1. Prerequisites](#1-prerequisites)
+- [2. Cloning a Repository](#2-cloning-a-repository)
+- [3. Editing LaTeX Files](#3-editing-latex-files)
+- [4. Staging, Committing, and Pushing Changes](#4-staging-committing-and-pushing-changes)
+  - [4.1 Checking the Status](#41-checking-the-status)
+  - [4.2 Staging Changes](#42-staging-changes)
+  - [4.3 Committing Changes](#43-committing-changes)
+  - [4.4 Pushing Changes to GitHub](#44-pushing-changes-to-github)
+- [5. Pulling the Latest Changes](#5-pulling-the-latest-changes)
+- [6. Resolving Merge Conflicts (If Any)](#6-resolving-merge-conflicts-if-any)
+- [7. Best Practices](#7-best-practices)
+- [8. Setting Up VS Code with GitHub](#8-setting-up-vs-code-with-github)
+  - [8.1 Cloning a Repository in VS Code](#81-cloning-a-repository-in-vs-code)
+  - [8.2 Staging, Committing, and Pushing from VS Code](#82-staging-committing-and-pushing-from-vs-code)
+
 ## 1. Prerequisites
 Before you start, ensure you have the following installed:
 - **Git**: Install from [git-scm.com](https://git-scm.com/)
@@ -100,6 +116,25 @@ If a conflict occurs when pulling changes:
 - Use branches for major edits (`git checkout -b new-branch-name`).
 - If working collaboratively, communicate changes effectively.
 
----
-Now you are set up to efficiently work with GitHub and LaTeX! 
+## 8. Setting Up VS Code with GitHub
+
+### 8.1 Cloning a Repository in VS Code
+1. Open **VS Code**.
+2. Install the **GitHub Extension** (if not already installed) from the Extensions Marketplace.
+3. Open the Command Palette (`Ctrl + Shift + P` on Windows/Linux or `Cmd + Shift + P` on macOS).
+4. Search for `Git: Clone` and select it.
+5. Paste the repository URL (e.g., `https://github.com/username/repository-name.git`).
+6. Select a folder to clone the repository into.
+7. Once cloned, open the repository in VS Code.
+
+### 8.2 Staging, Committing, and Pushing from VS Code
+1. Open **Source Control** (`Ctrl + Shift + G` or click the Source Control icon in the sidebar).
+2. You will see a list of changed files.
+3. Click on a file to view the changes.
+4. To stage changes, click the `+` icon next to each file or use the `Stage All` button.
+5. Write a commit message in the text box.
+6. Click the **Commit** button (or press `Ctrl + Enter`).
+7. Click the **Sync Changes** button or run `Git: Push` from the Command Palette to upload changes to GitHub.
+
+
 
