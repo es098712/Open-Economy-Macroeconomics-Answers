@@ -3,25 +3,27 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f7fc;
-    color: #333;
+    background-color: #111; /* Dark black background */
+    color: #f8f8f8; /* Light text for readability */
 }
 
 /* Header */
 header {
-    background-color: #002147;
+    background-color: #8b0000; /* Dark red */
     color: white;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 header .logo {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
 }
 
+/* Navigation Menu */
 nav ul {
     list-style: none;
     margin: 0;
@@ -37,10 +39,14 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    background: #ff0000; /* Bright red hover effect */
+    color: black;
 }
 
 /* Search Section */
@@ -53,11 +59,13 @@ nav ul li a:hover {
     width: 80%;
     max-width: 500px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #cc0000;
     border-radius: 5px;
+    background-color: #222;
+    color: white;
 }
 
-/* Repository Section */
+/* Answer Keys Section */
 .repository {
     text-align: center;
     padding: 20px;
@@ -66,6 +74,9 @@ nav ul li a:hover {
 .repository ul {
     list-style: none;
     padding: 0;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .repository ul li {
@@ -74,11 +85,13 @@ nav ul li a:hover {
 
 .repository ul li a {
     text-decoration: none;
-    color: #002147;
+    color: #ff4444; /* Lighter red for contrast */
     font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
 
 .repository ul li a:hover {
+    color: #ff0000; /* Brighter red on hover */
     text-decoration: underline;
 }
 
@@ -86,10 +99,11 @@ nav ul li a:hover {
 .discussion-section {
     text-align: center;
     padding: 30px;
-    background: #e0e6f1;
+    background: #222; /* Dark gray for contrast */
     border-radius: 8px;
     max-width: 600px;
     margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(255, 0, 0, 0.4);
 }
 
 .discussion-box {
@@ -104,46 +118,48 @@ nav ul li a:hover {
     max-width: 500px;
     height: 100px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #cc0000;
     border-radius: 5px;
     resize: none;
     display: block;
     margin-bottom: 10px;
+    background-color: #111;
+    color: white;
 }
 
 button {
     padding: 10px 15px;
     border: none;
-    background-color: #002147;
+    background-color: #cc0000;
     color: white;
     cursor: pointer;
     width: 90%;
     max-width: 150px;
     border-radius: 5px;
+    transition: background 0.3s ease-in-out;
 }
 
 button:hover {
-    background-color: #0044cc;
+    background-color: #ff0000;
 }
 
+/* Comment List */
 #comments-list {
     list-style: none;
     padding: 0;
     text-align: left;
-    margin-top: 20px;
     max-width: 500px;
     width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px auto;
 }
 
 #comments-list li {
-    background: white;
+    background: #333;
     padding: 10px;
     margin: 5px 0;
     width: 100%;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #cc0000;
     display: flex;
     flex-direction: column;
 }
@@ -155,14 +171,13 @@ button:hover {
 
 .comment-timestamp {
     font-size: 12px;
-    color: gray;
+    color: #ff4444;
     text-align: right;
 }
 
-
 /* Footer */
 footer {
-    background-color: #002147;
+    background-color: #8b0000;
     color: white;
     text-align: center;
     padding: 15px;
