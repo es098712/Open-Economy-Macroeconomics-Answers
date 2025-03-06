@@ -27,7 +27,7 @@ function postComment() {
             timestamp: new Date().toLocaleString(), // Get readable timestamp
         };
 
-        comments.push(commentObject); // Append new comment to the array
+        comments.unshift(commentObject); // Add new comment to the **beginning** of the array
         localStorage.setItem("comments", JSON.stringify(comments)); // Save to localStorage
 
         loadComments(); // Reload the list (this ensures sorting is correct)
@@ -41,7 +41,7 @@ function loadComments() {
     let commentsList = document.getElementById("comments-list");
     commentsList.innerHTML = ""; // Clear the list before reloading
 
-    // Ensure the oldest comments appear at the bottom
+    // Display comments in order (newest at the top)
     comments.forEach(commentObject => addCommentToDOM(commentObject));
 }
 
@@ -52,5 +52,7 @@ function addCommentToDOM(commentObject) {
         <div class="comment-text">${commentObject.text}</div>
         <div class="comment-timestamp">${commentObject.timestamp}</div>
     `;
-    document.getElementById("comments-list").appendChild(listItem);
+    
+    let commentsList = document.getElementById("comments-list");
+    commentsList.insertBefore(listItem, commentsList.firstChild); // Add to the **top** of the list
 }
