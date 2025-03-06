@@ -14,33 +14,44 @@ document.addEventListener("DOMContentLoaded", function () {
     loadComments();
 });
 
-// Function to post a comment and save it to localStorage
 function postComment() {
     let commentBox = document.getElementById("comment-box");
     let commentText = commentBox.value.trim();
 
     if (commentText !== "") {
-        let comments = JSON.parse(localStorage.getItem("comments")) || []; // Get saved comments
-        comments.push(commentText); // Add new comment
-        localStorage.setItem("comments", JSON.stringify(comments)); // Save back to localStorage
+        let comments = JSON.parse(localStorage.getItem("comments")) || [];
 
-        addCommentToDOM(commentText); // Display new comment
-        commentBox.value = ""; // Clear input box
+        // Create a comment object with text and timestamp
+        let commentObject = {
+            text: commentText,
+            timestamp: new Date().toLocaleString(), // Get readable timestamp
+        };
+
+        comments.push(commentObject); // Append new comment to the array
+        localStorage.setItem("comments", JSON.stringify(comments)); // Save to localStorage
+
+        addCommentToDOM(commentObject); // Display the comment
+        commentBox.value = ""; // Clear input
     }
 }
 
 // Function to load and display comments from localStorage
 function loadComments() {
-    let comments = JSON.parse(localStorage.getItem("comments")) || []; // Get saved comments
+    let comments = JSON.parse(localStorage.getItem("comments")) || [];
     let commentsList = document.getElementById("comments-list");
     commentsList.innerHTML = ""; // Clear the list before reloading
 
-    comments.forEach(addCommentToDOM); // Add each saved comment to the DOM
+    // Reverse to show the oldest comments at the bottom
+    comments.forEach(addCommentToDOM);
 }
 
-// Helper function to add a comment to the list
-function addCommentToDOM(commentText) {
+// Helper function to add a comment with timestamp to the DOM
+function addCommentToDOM(commentObject) {
     let listItem = document.createElement("li");
-    listItem.textContent = commentText;
+    
+    // Format the comment to include the timestamp
+    listItem.innerHTML = `<strong>${commentObject.timestamp}</strong><br>${commentObject.text}`;
+    
     document.getElementById("comments-list").appendChild(listItem);
 }
+

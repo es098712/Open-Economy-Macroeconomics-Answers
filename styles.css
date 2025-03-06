@@ -87,20 +87,28 @@ nav ul li a:hover {
     text-align: center;
     padding: 30px;
     background: #e0e6f1;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
 }
 
 .discussion-box {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #comment-box {
-    width: 80%;
+    width: 100%;
     max-width: 500px;
     height: 100px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     resize: none;
+    display: block;
+    margin-bottom: 10px;
 }
 
 button {
@@ -109,7 +117,9 @@ button {
     background-color: #002147;
     color: white;
     cursor: pointer;
-    margin-top: 10px;
+    width: 100%;
+    max-width: 150px;
+    border-radius: 5px;
 }
 
 button:hover {
@@ -119,17 +129,20 @@ button:hover {
 #comments-list {
     list-style: none;
     padding: 0;
+    text-align: left;
+    margin-top: 20px;
 }
 
 #comments-list li {
     background: white;
     padding: 10px;
-    margin: 10px auto;
-    width: 80%;
+    margin: 5px auto;
+    width: 90%;
     max-width: 500px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
+
 
 /* Footer */
 footer {
