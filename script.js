@@ -41,9 +41,10 @@ function loadComments() {
     let commentsList = document.getElementById("comments-list");
     commentsList.innerHTML = ""; // Clear the list before reloading
 
-    // Display comments in order (newest at the top)
-    comments.forEach(commentObject => addCommentToDOM(commentObject));
+    // Reverse the order to show newest comments at the top
+    comments.reverse().forEach(addCommentToDOM);
 }
+
 
 // Helper function to add a comment with timestamp to the DOM
 function addCommentToDOM(commentObject) {
