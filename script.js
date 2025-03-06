@@ -30,7 +30,7 @@ function postComment() {
         comments.push(commentObject); // Append new comment to the array
         localStorage.setItem("comments", JSON.stringify(comments)); // Save to localStorage
 
-        addCommentToDOM(commentObject); // Display the comment
+        loadComments(); // Reload the list (this ensures sorting is correct)
         commentBox.value = ""; // Clear input
     }
 }
@@ -41,17 +41,16 @@ function loadComments() {
     let commentsList = document.getElementById("comments-list");
     commentsList.innerHTML = ""; // Clear the list before reloading
 
-    // Reverse to show the oldest comments at the bottom
-    comments.forEach(addCommentToDOM);
+    // Ensure the oldest comments appear at the bottom
+    comments.forEach(commentObject => addCommentToDOM(commentObject));
 }
 
 // Helper function to add a comment with timestamp to the DOM
 function addCommentToDOM(commentObject) {
     let listItem = document.createElement("li");
-    
-    // Format the comment to include the timestamp
-    listItem.innerHTML = `<strong>${commentObject.timestamp}</strong><br>${commentObject.text}`;
-    
+    listItem.innerHTML = `
+        <div class="comment-text">${commentObject.text}</div>
+        <div class="comment-timestamp">${commentObject.timestamp}</div>
+    `;
     document.getElementById("comments-list").appendChild(listItem);
 }
-
