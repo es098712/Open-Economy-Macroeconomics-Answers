@@ -35,25 +35,6 @@ function postComment() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Get all chapter links with the class "chapter-toggle"
-    let chapters = document.querySelectorAll(".chapter-toggle");
-
-    chapters.forEach((chapter) => {
-        chapter.addEventListener("click", function (event) {
-            event.preventDefault();
-            
-            // Toggle the visibility of the next sibling element (the dropdown list)
-            let sectionList = this.nextElementSibling;
-            if (sectionList) {
-                sectionList.classList.toggle("visible");
-            }
-        });
-    });
-});
-
-
-
 
 // Function to load and display comments from localStorage
 function loadComments() {
@@ -77,3 +58,18 @@ function addCommentToDOM(commentObject) {
     let commentsList = document.getElementById("comments-list");
     commentsList.insertBefore(listItem, commentsList.firstChild); // Add to the **top** of the list
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const chapterToggles = document.querySelectorAll(".chapter-toggle");
+
+    chapterToggles.forEach(toggle => {
+        toggle.addEventListener("click", function (e) {
+            e.preventDefault();
+            const section = this.nextElementSibling;
+            if (section && section.classList.contains("chapter-sections")) {
+                section.classList.toggle("visible");
+            }
+        });
+    });
+});
+
