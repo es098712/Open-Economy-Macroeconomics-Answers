@@ -354,7 +354,38 @@ as a monetary economy with rigid nominal prices and a central bank that deploys 
 \begin{quote}
 {\bf Answer:}
 \begin{enumerate}
-\item The PVBC is 
+\item We can begin from the household's sequential budget constraint at time 0 and solve for $b_0$
+\begin{gather*}
+    c_0 + \frac{b_0}{1+r_0} = y_0 +b_{-1} \\
+    \implies b_0 = (1+r_0)(y_0+b_{-1}-c_0),
+\end{gather*}
+we can also rearrange this equation at time 1 to get
+\begin{equation*}
+    b_1 = \frac{b_2}{1+r_1} + c_2 - y_2.
+\end{equation*}
+We then plug these expressions into the sequential budget constraint at time 1:
+\begin{equation*}
+    c_0 + \frac{c_1}{1+r_0} + \frac{c_2}{(1+r_0)(1+r_1)} + \frac{b_2}{\displaystyle\prod_{s=0}^2 (1+r_s)} = b_{-1} + y_0 + \frac{y_1}{1+r_0} + \frac{y_2}{(1+r_0)(1+r_1)}.
+\end{equation*}
+Iterating this equation forward, we get the PVBC at time 0
+\begin{equation*}
+\sum_{t=0}^{\infty} 
+\left(
+\frac
+{c_{t}}
+{\displaystyle \prod_{s=0}^{t-1} (1+r_{s})} 
+\right)
+=
+b_{-1}
++
+\sum_{t=0}^{\infty} 
+\left(
+\frac
+{y_{t} }
+{\displaystyle \prod_{s=0}^{t-1} (1+r_{s})} 
+\right)
+\end{equation*}
+where, in an abuse of notation, we set $r_{-1}=0$. This PVBC must hold in every time period, meaning we can write this as 
 \begin{equation}
 \sum_{j=0}^{\infty} 
 \left(
@@ -372,29 +403,30 @@ b_{t-1}
 {\displaystyle \prod_{s=0}^{j-1} (1+r_{t+s})} 
 \right),
 \end{equation}
-which says that the PDV of consumption is equal to the sum of the  initial asset position and the PDV of the endowment stream. 
+which says that the PDV of consumption is equal to the sum of the initial asset position and the PDV of the endowment stream.
 \item 
-The Lagrangian
+To derive the equilibrium paths we first write the Lagrangian for the consumer maximizing their utility subject to the sequential budget constraint
 \[
 \mathcal{L} = \sum_{t=0}^{\infty} \beta^t \left\{
-\ln c_t + \lambda_t \left[ y_t  + b_{t-1} - c_t - \frac{b_t}{1+r_t} \right]\right\}
+\ln c_t + \lambda_t \left[ y_t  + b_{t-1} - c_t - \frac{b_t}{1+r_t} \right]\right\}.
 \]
-FOC
+This Lagrangian has first order conditions with respect to $c_t$ and $b_{t+1}$ respectively
 \begin{eqnarray*}
 \frac{1}{c_t}& = &\lambda_t\\
-\frac{\lambda_t}{1+r_t} &=& \beta \lambda_{t+1}
+\frac{\lambda_t}{1+r_t} &=& \beta \lambda_{t+1}.
 \end{eqnarray*}
-EQM, $\{c_t,  b_t\}_{t=0}^{\infty}$ such that for all $t\ge 0$
+An equilibrium is paths $\{c_t,  b_t\}_{t=0}^{\infty}$ such that for all $t\ge 0$ we have the combined first order conditions, sequential budget constraint, and the no-Ponzi game condition
 \begin{eqnarray}
+\label{eq:j3}
 c_{t+1}&=& \beta (1+r_t)c_t\\
 \label{eq:bc}
 c_t + \frac{b_t}{1+r_t}& = &y_t  + b_{t-1}\\
 \label{eq:tvc}
 \lim_{j\rightarrow \infty} \frac{b_{t+j}}{\Pi_{s=0}^j (1+r_{t+s})}&= &0 
 \end{eqnarray}
-given $\{r_t\}$, $\{y_t\}$, and $b_{-1}$.
+given $\{r_t\}_{t=0}^{\infty}$, $\{y_t\}_{t=0}^{\infty}$, and $b_{-1}$.
 
-Equivalently, EQM  is a $c_0$ such that 
+Equivalently, equilibrium is a $c_0$ such that 
 \begin{equation}
 c_0 = (1-\beta) b_{-1}
 + (1-\beta)  \sum_{t=0}^{\infty} 
@@ -402,43 +434,47 @@ c_0 = (1-\beta) b_{-1}
 \frac
 {y_{t} }
 {\displaystyle \prod_{s=0}^{t-1} (1+r_{s})} 
-\right)
+\right).
+\label{eq:j1}
 \end{equation}
 
-To see this, use xxx to obtain
+To see this, iterate \eqref{eq:j3} backwards to obtain
 \begin{equation}
+\label{eq:j2}
 c_t = \beta^t\left( \prod_{s=0}^{t-1} (1+r_s)\right) c_0.
 \end{equation}
 Rearranging yields 
-$
-\frac{c_t}{\left( \prod_{s=0}^{t-1} (1+r_s)\right)} = \beta^t c_0.
-$
-Now sum both sides $t=0$ to $\infty$
-$\sum_{t=0}^{\infty} 
-\frac{
- c_{t}}
-{ \prod_{s=0}^{t-1} (1+r_{s})} 
-= \sum_{t=0}^{\infty} 
-\beta^t c_0 = \frac{1}{1-\beta}\,  c_0.
-$ Now use this expression in equation xxx to obtain 
-$
-\frac{1}{1-\beta}\,  c_0
-=
-b_{-1}
-+
-\sum_{t=0}^{\infty} 
-\left(
-\frac
-{y_{t} }
-{ \prod_{s=0}^{t-1} (1+r_{s})} 
-\right)
-$
-which yields the equation xxx.
+\begin{equation*}
+    \frac{c_t}{\left( \prod_{s=0}^{t-1} (1+r_s)\right)} = \beta^t c_0.
+\end{equation*}
+Now we can sum both sides from $t=0$ to $\infty$ to obtain
+\begin{equation*}
+    \sum_{t=0}^{\infty} 
+    \frac{c_{t}}{\prod_{s=0}^{t-1}(1+r_{s})} 
+    = \sum_{t=0}^{\infty} \beta^t c_0 = \frac{1}{1-\beta}\, c_0
+\end{equation*}
+by expanding the geometric sum on the right-hand side. Now use this expression in the PVBC at time 0 to obtain 
+\begin{equation*}
+    \frac{1}{1-\beta}\, c_0 = b_{-1} + \sum_{t=0}^{\infty} 
+    \left(
+    \frac{y_{t}}{\prod_{s=0}^{t-1} (1+r_{s})} 
+    \right)
+\end{equation*}
+which yields the equation \eqref{eq:j1}.
+
+% not sure how to start with b_0, my thought it the budget constraint, as the new condition is a different way of writing the Euler equation
+How to find the associated path of $b_t$ and $c_t$? Use \eqref{eq:bc} evaluated at $t=0$. This gives $b_0$. Then use \eqref{eq:j1} evaluated at $t=0$. This gives $c_1$. With $b_0$ and $c_1$ in hand evaluate \eqref{eq:bc} for $t=1$ to obtain $b_1$. Continue in this way to construct the sequences $\{c_t\}_{t=0}^{\infty}$ and $\{b_t\}_{t=0}^{\infty}$. 
 
 
-How to find the associated path of $b_t$ and $c_t$? Use xxx evaluated at $t=0$. This gives $b_0$. Then use xxx evaluated at $t=0$. This gives $c_1$. With $b_0$ and $c_1$ in hand evaluate xxx for $t=1$ to obtain $b_1$. Continue in this way to construct the sequences $\{c_t\}_{t=0}^{\infty}$ and $\{b_t\}_{t=0}^{\infty}$. 
+\item 
+{\bf Storage Economy}: $y=0$ and $b_{-1}>0$.
 
-\item Storage economy, $y=0$ and $b_{-1}>0$
+Plug these conditions into \eqref{eq:j1} for both interest rate paths
+\begin{eqnarray*}
+    c_0 &=& (1-\beta)b_{-1} \\
+    c'_0 &=& (1-\beta)b_{-1}
+\end{eqnarray*}
+and we see that the anticipated rate cut has no effect on consumption today. Now we can plug these expressions into \eqref{eq:j2} to find the whole consumption paths
 \[
 \frac{c'_t}{c_t} = \left\{  \begin{array}{ll}
 1 & \mbox{ for all } t\le t^*\\
@@ -447,12 +483,12 @@ How to find the associated path of $b_t$ and $c_t$? Use xxx evaluated at $t=0$. 
 \right.
 \]
 
-So the anticipated rate cut leaves current consumption unchanged and lowers future consumption. the rate cut has a SE whereby current consumption rises and future consumption falls. But it also has an IE. Here the IE is negative because the positive stock of bonds will pay lower interest rate in the future. With log utility, SE exactly cancels IE effect and the future rate cut fails to stimulate the current economy. 
+So the anticipated rate cut leaves current consumption unchanged and lowers future consumption. The rate cut has a substitution effect (SE) whereby current consumption rises and future consumption falls. But it also has an income effect (IE). Here the IE is negative because the positive stock of bonds will pay lower interest rate in the future. With log utility, SE exactly cancels IE effect and the future rate cut fails to stimulate the current economy. 
 
 \item 
 {\bf Endowment Economy}: $y_t = y>0$ for all $t$ and $b_{-1}=0$. 
 
-In this case \eqref{eq:c_0} and \eqref{eq:c'_0} can be written as
+These conditions we can use \eqref{eq:j1} to get
 \begin{eqnarray*}
 \label{eq:c_0_endowment}
 c_0 &=& 
@@ -464,6 +500,7 @@ c_0 &=&
 + (1-\beta)   \sum_{t=t^*+1}^{\infty} 
 \left(\frac{y_{t}}{q_{0,t}} \right)
 \end{eqnarray*}
+where we discount income at period t to period 0 using $q_{0,t}$, which is simply the product of the interest rate terms. Now with the alternative interest rate path,
 \begin{eqnarray*}
 \label{eq:c'_0_endowment}
 c'_0 &=&  (1-\beta)  \sum_{t=0}^{\infty} 
@@ -478,17 +515,16 @@ c'_0 &=&  (1-\beta)  \sum_{t=0}^{\infty}
   \sum_{t=t^*+1}^{\infty} 
 \left(\frac{y_{t}}{q_{0,t}} \right)
 \end{eqnarray*}
-so that 
+where we multiply and divide by the new interest rate in period t in order to cancel terms in the product $q_{0,t}$. We can combine these expressions above to get
 \[
 c'_0 - c_0 = (1-\beta)  \sum_{t=t^*+1}^{\infty} 
 \left(\frac{y_{t}}{q_{0,t}} \right) \left[\frac{1+r_{t^*}}{1+r'_{t^*}} -1\right]
 >0\]
+which must be positive as $r_{t^*}>r'_{t^*}$.
 
+What is different now? There is a positive income effect associated with the expected future rate cut because the PDV of endowment stream is higher. Thus, SE and IE reinforce each other for $t\le t^*$ and pull in opposite directions for $t>t^*$. 
 
-
-What is different now? There is a positive income effect associated with the expected future rate cut. PDV of endowment stream is higher. Thus, SE and IE reinforce each other for $t\le t^*$ and pull in opposite directions for $t>t^*$. 
-
-Size of increase in consumption for $t \le t^*$ now depends on $t^*$. The further in the future is the rate cut, the {\bf smaller} is the positive IE and hence the smaller is increase in demand. By contrast in the NK model, increase in consumption depends only on size of rate cut, but not on anticipation horizon, i.e., a rate cut in 100 years has {\bf same power} as a rate cut in 1 year from now.
+The size of the increase in consumption for $t \le t^*$ now depends on $t^*$. The further in the future is the rate cut, the {\bf smaller} is the positive IE and hence the smaller is increase in demand. By contrast in the NK model, the increase in consumption depends on the size of rate cut, but not on anticipation horizon, i.e., a rate cut in 100 years has the {\bf same power} as a rate cut in 1 year. Therefore the concept of Forward Guidance is much more effective in the traditional NK setting than in either the storage economy or the endowment economy of this problem.
 
 \end{enumerate}
 \end{quote}
@@ -1103,18 +1139,10 @@ Comparison:  When the world component of the output increases, the whole world w
 \\ In the case of the country-specific shock, only one country wants to save more. All the countries are infinitely small, so there is no impact on the world interest rate. Country $j$  will save more to smooth the additional income over two periods.
 \end{enumerate}  
 \end{quote}
-\end{exercise} 
-
-stopped here on Tuesday January 28, 2025 @1:45pm
-
-To do 2.14, 2.15, 2.16, 2.17
-
-\end{document}
-
-
+\end{exercise}
 
 \begin{exercise}[Leontief Preferences Over Discounted Period Utilities]
-Consider  a perfect-foresight small open economy populated by a large number of identical households with preferences described by the utility
+Consider a perfect-foresight small open economy populated by a large number of identical households with preferences described by the utility
 function
 \[
  \min_{t\ge0} 
@@ -1144,7 +1172,7 @@ subject to
 \[
 c_t + (1+r) d_{t-1}  = y + d_t
 \]
-and no Ponzi
+and the no-Ponzi-game constraint.
 
 {\bf End of answer}
 \end{quote}
@@ -1299,14 +1327,6 @@ This means that  a permanent increase in the level of income leads to an increas
 \end{enumerate}  
 \end{exercise}
 
-
-\begin{exercise}
-[Testing the Intertemporal Approach on Emerging Market Data]
-Use the data posted online with the materials for chapter~\ref{chapter:empirics} to test the empirical validity of the intertemporal approach to the current account in emerging countries. Specifically, extract quarterly data on output and the current account from an emerging country of your choice and apply the econometric tests studied in section~\ref{sec:endowment_testing}. Discuss your findings. Make sure to include a comparison with the results for Canada reported in the aforementioned  section. 
-\end{exercise}
-
-
-
 \begin{exercise}[Leontief Preferences for Consumption and Leisure]
 
  Consider a small open economy inhabited by a large number of identical households with preferences described by the utility function
@@ -1394,11 +1414,11 @@ From period 0 onward, consumption falls monotonically at the constant gross rate
 
 
 
-\begin{exercise}[Permanent Income Versus  Beverage-Nelson Decomposition]
+\begin{exercise}[Permanent Income Versus  Beveridge-Nelson Decomposition]
 %This exercise is not in 1st edition 
 The file 
 endowment\_exercise\_Beverage\_Nelson.dat
-%produced by running endowment_exercise_Beverage_Nelson.m  
+%produced by running endowment_exercise_Beveridge_Nelson.m  
 %in z:\uribe\book\endowment
 posted online with the materials for the chapter contains a time series for output, 
 which will be denoted  $y_t$, for country X. The data is monthly from 1900:1 to 2020:12. 
@@ -1425,7 +1445,7 @@ const. & 0.000 \\
 & (0.000) \\
 \hline\hline
 \end{tabular}}
-%produced by running the stata code \verb?endowment_exercise_beverage_nelson.do ?
+%produced by running the stata code \verb?endowment_exercise_Beveridge_nelson.do ?
 %in z:\uribe\book\endowment
 
 {\bf End Answer.}
@@ -1443,11 +1463,11 @@ const. & 0.000 \\
 
 \item Compute the coefficients of the cyclical component 
 of the 
-{\it Beverage-Nelson decomposition}, which is given by 
+{\it Beveridge-Nelson decomposition}, which is given by 
  $y^c_t=y_t-\lim_{j\rightarrow  \infty}E_ty_{t+j}$.  (Hint: $y^c_t$ is a linear function of $\Delta y_t$ and $\Delta y_{t-1}$.)
 \begin{quote}
 {\bf Begin Answer: }
-After some algebra, the Beverage-Nelson decomposition can be written as
+After some algebra, the Beveridge-Nelson decomposition can be written as
 \begin{equation*}
 y_t^c = - \sum_{j=1}^{\infty} E_t\Delta y_{t+j}
 \end{equation*}
@@ -1455,7 +1475,7 @@ Let $Y_t = \begin{bmatrix} \Delta y_t \\ \Delta y_{t-1} \end{bmatrix} $  and $R 
 \begin{equation*}
 Y_t = R Y_{t-1} + \begin{bmatrix} \varepsilon_t \\ 0 \end{bmatrix}
 \end{equation*}
-Then $E_t Y_{t+j} = R^j Y_{t}$ and the Beverage-Nelson cyclical component becomes:
+Then $E_t Y_{t+j} = R^j Y_{t}$ and the Beveridge-Nelson cyclical component becomes:
 \begin{equation*}
 y_t^c = - \begin{bmatrix} 1 & 0 \end{bmatrix} \sum_{j=1}^{\infty} R^j Y_t =  - \begin{bmatrix} 1 & 0 \end{bmatrix} R (I - R)^{-1} Y_t
 \end{equation*}
@@ -1473,7 +1493,7 @@ $\Delta y_t$ & $-2.194$ \\
 $\Delta y_{t-1}$ & $-0.538$ \\
 \hline\hline
 \end{tabular}}
-%produced by running the   stata code \verb?endowment_exercise_beverage_nelson.do ?
+%produced by running the   stata code \verb?endowment_exercise_Beveridge_nelson.do ?
 %in z:\uribe\book\endowment
 
 {\bf End Answer.}
@@ -1484,7 +1504,7 @@ $\Delta y_{t-1}$ & $-0.538$ \\
 
 \begin{quote}
 {\bf Begin Answer: }
-Run the stata code \verb?endowment_exercise_beverage_nelson.do ?
+Run the stata code \verb?endowment_exercise_Beverage_nelson.do ?
 %located in z:\uribe\book\endowment
 
 {\bf End Answer.}
@@ -1531,7 +1551,7 @@ $\Delta y_t$ & $8.681$ \\
 $\Delta y_{t-1}$ & $1.998$ \\
 \hline\hline
 \end{tabular}}
-%Produced by running  the stata code \verb?endowment_exercise_beverage_nelson.do ?
+%Produced by running  the stata code \verb?endowment_exercise_Beveridge_nelson.do ?
 %in z:\uribe\book\endowment
 
 {\bf End Answer.}
@@ -1544,7 +1564,7 @@ $\Delta y_{t-1}$ & $1.998$ \\
 
 
 %\centerline{\includegraphics[scale=0.2]{hw1p2.jpg}}
-Run the   stata code \verb?endowment_exercise_beverage_nelson.do ?
+Run the   stata code \verb?endowment_exercise_Beverage_nelson.do ?
 %in z:\uribe\book\endowment
 The second computation yields a more volatile time series.
 
@@ -1593,6 +1613,8 @@ $\mu>0$, therefore, this process generates excess consumption volatility.
 \end{quote}
 \end{enumerate}
 \end{exercise} 
+
+
 
 
 
