@@ -35,6 +35,26 @@ function postComment() {
     }
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Get all chapter links with the class "chapter-toggle"
+    let chapters = document.querySelectorAll(".chapter-toggle");
+
+    chapters.forEach((chapter) => {
+        chapter.addEventListener("click", function (event) {
+            event.preventDefault();
+            
+            // Toggle the visibility of the next sibling element (the dropdown list)
+            let sectionList = this.nextElementSibling;
+            if (sectionList) {
+                sectionList.classList.toggle("visible");
+            }
+        });
+    });
+});
+
+
+
+
 // Function to load and display comments from localStorage
 function loadComments() {
     let comments = JSON.parse(localStorage.getItem("comments")) || [];

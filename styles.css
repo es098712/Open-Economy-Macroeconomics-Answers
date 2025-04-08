@@ -83,16 +83,46 @@ nav ul li a:hover {
     padding: 10px;
 }
 
-.repository ul li a {
+/* Main Chapter Links (with toggle effect) */
+.chapter-toggle {
     text-decoration: none;
     color: #ff4444; /* Lighter red for contrast */
     font-weight: bold;
+    display: block;
+    cursor: pointer;
     transition: color 0.3s ease-in-out;
 }
 
-.repository ul li a:hover {
+.chapter-toggle:hover {
     color: #ff0000; /* Brighter red on hover */
     text-decoration: underline;
+}
+
+/* Dropdown Subsections */
+.chapter-sections {
+    display: none;
+    margin-left: 20px;
+    padding-left: 10px;
+    border-left: 2px solid #ff4444;
+}
+
+.chapter-sections.visible {
+    display: block;
+}
+
+.chapter-sections li {
+    list-style: none;
+    padding: 5px 0;
+}
+
+.chapter-sections li a {
+    color: #ffa07a;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.chapter-sections li a:hover {
+    color: #ff4500;
 }
 
 /* Discussion Section */
