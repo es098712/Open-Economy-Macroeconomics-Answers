@@ -15,17 +15,43 @@
 
     <main class="repository">
         <h2>Question 1.1</h2>
-        <p>This section includes a live-editable LaTeX document via Overleaf.</p>
+        <p>Use the LaTeX editor below to experiment with equations related to this question. Changes will render live.</p>
 
-        <section class="latex-embed">
-            <iframe 
-                src="https://www.overleaf.com/read/5322594285pkmbhnvvgpsv" 
-                width="100%" 
-                height="700px" 
-                style="border: 1px solid #ccc;">
-                Your browser does not support iframes.
-            </iframe>
+        <section style="margin-top: 30px;">
+            <label for="latex-input"><strong>Enter LaTeX Code:</strong></label><br>
+            <textarea id="latex-input" rows="8" style="width: 100%; max-width: 700px;">
+E = mc^2
+
+\int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2}
+
+Y = C + I + G + NX
+            </textarea>
+
+            <h3 style="margin-top: 20px;">Live Preview:</h3>
+            <div id="latex-preview" style="background: #222; padding: 20px; border-radius: 5px;"></div>
         </section>
     </main>
+
+    <!-- MathJax for rendering LaTeX -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+        const input = document.getElementById("latex-input");
+        const preview = document.getElementById("latex-preview");
+
+        function renderLatex() {
+            const content = input.value
+                .split("\n")
+                .map(line => `\\[${line}\\]`)
+                .join("<br>");
+            preview.innerHTML = content;
+            MathJax.typesetPromise();
+        }
+
+        input.addEventListener("input", renderLatex);
+        renderLatex(); // Initial render
+    </script>
 </body>
 </html>
