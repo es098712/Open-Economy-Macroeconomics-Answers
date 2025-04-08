@@ -205,6 +205,20 @@ button:hover {
     text-align: right;
 }
 
+/* Smooth dropdown animation */
+.chapter-sections {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease;
+    opacity: 0;
+}
+
+.chapter-sections.visible {
+    max-height: 500px; /* big enough to show all content */
+    opacity: 1;
+}
+
+
 /* Footer */
 footer {
     background-color: #8b0000;
@@ -213,3 +227,5 @@ footer {
     padding: 15px;
     margin-top: 40px;
 }
+
+

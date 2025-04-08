@@ -65,9 +65,15 @@ document.addEventListener("DOMContentLoaded", function () {
     chapterToggles.forEach(toggle => {
         toggle.addEventListener("click", function (e) {
             e.preventDefault();
+
             const section = this.nextElementSibling;
             if (section && section.classList.contains("chapter-sections")) {
                 section.classList.toggle("visible");
+
+                const arrow = this.querySelector(".arrow");
+                if (arrow) {
+                    arrow.textContent = section.classList.contains("visible") ? "▲" : "▼";
+                }
             }
         });
     });
