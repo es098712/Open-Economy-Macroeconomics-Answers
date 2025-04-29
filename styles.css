@@ -3,13 +3,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #111; /* Dark black background */
-    color: #f8f8f8; /* Light text for readability */
+    background-color: #ed5222; /* Main background color */
+    color: #fff5f0; /* Light variation for text readability */
 }
 
 /* Header */
 header {
-    background-color: #8b0000; /* Dark red */
+    background-color: #d94a1f; /* Slightly darker variation */
     color: white;
     padding: 15px 20px;
     display: flex;
@@ -36,7 +36,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #fff5f0; /* Light variation for contrast */
     text-decoration: none;
     font-weight: bold;
     padding: 8px 12px;
@@ -45,8 +45,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background: #ff0000; /* Bright red hover effect */
-    color: black;
+    background: #c7431c; /* Darker variation for hover */
+    color: white;
 }
 
 /* Search Section */
@@ -59,10 +59,10 @@ nav ul li a:hover {
     width: 80%;
     max-width: 500px;
     padding: 10px;
-    border: 1px solid #cc0000;
+    border: 1px solid #c7431c; /* Darker border for contrast */
     border-radius: 5px;
-    background-color: #222;
-    color: white;
+    background-color: #f2a07a; /* Lighter variation for input background */
+    color: #5a1f0f; /* Dark text for readability */
 }
 
 /* Answer Keys Section */
@@ -81,12 +81,16 @@ nav ul li a:hover {
 
 .repository ul li {
     padding: 10px;
+    background-color: #f2a07a; /* Lighter variation for list items */
+    color: #5a1f0f; /* Dark text for readability */
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 /* Main Chapter Links (with toggle effect) */
 .chapter-toggle {
     text-decoration: none;
-    color: #ff4444; /* Lighter red for contrast */
+    color: #fff5f0; /* Light variation for contrast */
     font-weight: bold;
     display: block;
     cursor: pointer;
@@ -94,7 +98,7 @@ nav ul li a:hover {
 }
 
 .chapter-toggle:hover {
-    color: #ff0000; /* Brighter red on hover */
+    color: #c7431c; /* Darker variation for hover */
     text-decoration: underline;
 }
 
@@ -103,7 +107,7 @@ nav ul li a:hover {
     display: none;
     margin-left: 20px;
     padding-left: 10px;
-    border-left: 2px solid #ff4444;
+    border-left: 2px solid #c7431c; /* Darker border for contrast */
 }
 
 .chapter-sections.visible {
@@ -116,24 +120,24 @@ nav ul li a:hover {
 }
 
 .chapter-sections li a {
-    color: #ffa07a;
+    color: #f2a07a; /* Lighter variation for links */
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .chapter-sections li a:hover {
-    color: #ff4500;
+    color: #d94a1f; /* Slightly darker variation for hover */
 }
 
 /* Discussion Section */
 .discussion-section {
     text-align: center;
     padding: 30px;
-    background: #222; /* Dark gray for contrast */
+    background: #d94a1f; /* Slightly darker background */
     border-radius: 8px;
     max-width: 600px;
     margin: 20px auto;
-    box-shadow: 0px 4px 8px rgba(255, 0, 0, 0.4);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .discussion-box {
@@ -148,19 +152,19 @@ nav ul li a:hover {
     max-width: 500px;
     height: 100px;
     padding: 10px;
-    border: 1px solid #cc0000;
+    border: 1px solid #c7431c; /* Darker border for contrast */
     border-radius: 5px;
     resize: none;
     display: block;
     margin-bottom: 10px;
-    background-color: #111;
-    color: white;
+    background-color: #f2a07a; /* Lighter variation for input background */
+    color: #5a1f0f; /* Dark text for readability */
 }
 
 button {
     padding: 10px 15px;
     border: none;
-    background-color: #cc0000;
+    background-color: #c7431c; /* Darker variation for buttons */
     color: white;
     cursor: pointer;
     width: 90%;
@@ -170,7 +174,7 @@ button {
 }
 
 button:hover {
-    background-color: #ff0000;
+    background-color: #d94a1f; /* Slightly darker variation for hover */
 }
 
 /* Comment List */
@@ -184,12 +188,12 @@ button:hover {
 }
 
 #comments-list li {
-    background: #333;
+    background: #f2a07a; /* Lighter variation for list items */
     padding: 10px;
     margin: 5px 0;
     width: 100%;
     border-radius: 5px;
-    border: 1px solid #cc0000;
+    border: 1px solid #c7431c; /* Darker border for contrast */
     display: flex;
     flex-direction: column;
 }
@@ -201,31 +205,15 @@ button:hover {
 
 .comment-timestamp {
     font-size: 12px;
-    color: #ff4444;
+    color: #d94a1f; /* Slightly darker variation for timestamps */
     text-align: right;
 }
 
-/* Smooth dropdown animation */
-.chapter-sections {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out, opacity 0.4s ease;
-    opacity: 0;
-}
-
-.chapter-sections.visible {
-    max-height: 500px; /* big enough to show all content */
-    opacity: 1;
-}
-
-
 /* Footer */
 footer {
-    background-color: #8b0000;
+    background-color: #d94a1f; /* Slightly darker background */
     color: white;
     text-align: center;
     padding: 15px;
     margin-top: 40px;
 }
-
-
