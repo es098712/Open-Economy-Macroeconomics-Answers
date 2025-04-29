@@ -3,13 +3,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ed5222; /* Main background color */
-    color: #fff5f0; /* Light variation for text readability */
+    background-color: #1a1a1a; /* Dark main background */
+    color: #fff5f0; /* Light text for readability */
 }
 
 /* Header */
 header {
-    background-color: #d94a1f; /* Slightly darker variation */
+    background-color: #ed5222; /* Accent color */
     color: white;
     padding: 15px 20px;
     display: flex;
@@ -36,7 +36,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff5f0; /* Light variation for contrast */
+    color: #fff5f0; /* Light text for contrast */
     text-decoration: none;
     font-weight: bold;
     padding: 8px 12px;
@@ -45,7 +45,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background: #c7431c; /* Darker variation for hover */
+    background: #ed5222; /* Accent color for hover */
     color: white;
 }
 
@@ -59,10 +59,10 @@ nav ul li a:hover {
     width: 80%;
     max-width: 500px;
     padding: 10px;
-    border: 1px solid #c7431c; /* Darker border for contrast */
+    border: 1px solid #ed5222; /* Accent border */
     border-radius: 5px;
-    background-color: #f2a07a; /* Lighter variation for input background */
-    color: #5a1f0f; /* Dark text for readability */
+    background-color: #333333; /* Dark input background */
+    color: #fff5f0; /* Light text for readability */
 }
 
 /* Answer Keys Section */
@@ -81,16 +81,17 @@ nav ul li a:hover {
 
 .repository ul li {
     padding: 10px;
-    background-color: #f2a07a; /* Lighter variation for list items */
-    color: #5a1f0f; /* Dark text for readability */
+    background-color: #333333; /* Dark background for list items */
+    color: #fff5f0; /* Light text for readability */
     border-radius: 5px;
     margin-bottom: 10px;
+    border: 1px solid #ed5222; /* Accent border */
 }
 
 /* Main Chapter Links (with toggle effect) */
 .chapter-toggle {
     text-decoration: none;
-    color: #fff5f0; /* Light variation for contrast */
+    color: #ed5222; /* Accent color */
     font-weight: bold;
     display: block;
     cursor: pointer;
@@ -98,7 +99,7 @@ nav ul li a:hover {
 }
 
 .chapter-toggle:hover {
-    color: #c7431c; /* Darker variation for hover */
+    color: #fff5f0; /* Light text for hover */
     text-decoration: underline;
 }
 
@@ -107,7 +108,7 @@ nav ul li a:hover {
     display: none;
     margin-left: 20px;
     padding-left: 10px;
-    border-left: 2px solid #c7431c; /* Darker border for contrast */
+    border-left: 2px solid #ed5222; /* Accent border */
 }
 
 .chapter-sections.visible {
@@ -120,20 +121,20 @@ nav ul li a:hover {
 }
 
 .chapter-sections li a {
-    color: #f2a07a; /* Lighter variation for links */
+    color: #ed5222; /* Accent color for links */
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .chapter-sections li a:hover {
-    color: #d94a1f; /* Slightly darker variation for hover */
+    color: #fff5f0; /* Light text for hover */
 }
 
 /* Discussion Section */
 .discussion-section {
     text-align: center;
     padding: 30px;
-    background: #d94a1f; /* Slightly darker background */
+    background: #333333; /* Dark background */
     border-radius: 8px;
     max-width: 600px;
     margin: 20px auto;
@@ -152,19 +153,19 @@ nav ul li a:hover {
     max-width: 500px;
     height: 100px;
     padding: 10px;
-    border: 1px solid #c7431c; /* Darker border for contrast */
+    border: 1px solid #ed5222; /* Accent border */
     border-radius: 5px;
     resize: none;
     display: block;
     margin-bottom: 10px;
-    background-color: #f2a07a; /* Lighter variation for input background */
-    color: #5a1f0f; /* Dark text for readability */
+    background-color: #1a1a1a; /* Dark input background */
+    color: #fff5f0; /* Light text for readability */
 }
 
 button {
     padding: 10px 15px;
     border: none;
-    background-color: #c7431c; /* Darker variation for buttons */
+    background-color: #ed5222; /* Accent color */
     color: white;
     cursor: pointer;
     width: 90%;
@@ -188,12 +189,12 @@ button:hover {
 }
 
 #comments-list li {
-    background: #f2a07a; /* Lighter variation for list items */
+    background: #333333; /* Dark background for list items */
     padding: 10px;
     margin: 5px 0;
     width: 100%;
     border-radius: 5px;
-    border: 1px solid #c7431c; /* Darker border for contrast */
+    border: 1px solid #ed5222; /* Accent border */
     display: flex;
     flex-direction: column;
 }
@@ -205,13 +206,13 @@ button:hover {
 
 .comment-timestamp {
     font-size: 12px;
-    color: #d94a1f; /* Slightly darker variation for timestamps */
+    color: #ed5222; /* Accent color for timestamps */
     text-align: right;
 }
 
 /* Footer */
 footer {
-    background-color: #d94a1f; /* Slightly darker background */
+    background-color: #ed5222; /* Accent color */
     color: white;
     text-align: center;
     padding: 15px;
